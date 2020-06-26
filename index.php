@@ -1,1 +1,1 @@
-<?php echo "Hello World \n Second try"; ?>
+<?php echo "DEPLOYED IN HEROKU" ?>
