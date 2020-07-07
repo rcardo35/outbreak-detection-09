@@ -32,10 +32,18 @@
 
     <!-- Fade In -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    
+    <!-- Include in all files -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.15/sorting/datetime-moment.js"></script>
+<!--    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>-->
+<!--    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">-->
 
 
     <script>
@@ -62,14 +70,10 @@
 		function hideNonStudent() {
 			$("#nonStudent_questions").fadeOut();
 		}
-		
-		$('#sandbox-container .input-group.date').datepicker({
-			todayBtn: "linked",
-			clearBtn: true,
-			toggleActive: true
+  
+		$(document).ready(function () {
+			$('#exp_date').datepicker();
 		});
-		
-		$('.datepicker').datepicker();
     </script>
 
     <style>
@@ -92,60 +96,7 @@
 </head>
 <body>
 <header id="header" id="home">
-    <div class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-                    <a href="tel:+953 012 3654 896"><span class="lnr lnr-phone-handset"></span> <span class="text">+953 012 3654 896</span></a>
-                    <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text">support@colorlib.com</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container main-menu">
-        <div class="row align-items-center justify-content-between d-flex">
-            <div id="logo">
-                <a href="index.php"><img src="assets/img/logo.png" alt="" title=""/></a>
-            </div>
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="courses.php">Courses</a></li>
-                    <li><a href="events.php">Events</a></li>
-                    <li><a href="gallery.php">Gallery</a></li>
-                    <li class="menu-has-children"><a href="">Blog</a>
-                        <ul>
-                            <li><a href="blog-home.php">Blog Home</a></li>
-                            <li><a href="blog-single.php">Blog Single</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-has-children"><a href="">Pages</a>
-                        <ul>
-                            <li><a href="course-details.php">Course Details</a></li>
-                            <li><a href="event-details.php">Event Details</a></li>
-                            <li><a href="elements.php">Elements</a></li>
-                            <li class="menu-has-children"><a href="">Level 2 </a>
-                                <ul>
-                                    <li><a href="#">Item One</a></li>
-                                    <li><a href="#">Item Two</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-            </nav><!-- #nav-menu-container -->
-        </div>
-    </div>
+    <?php require_once "navbar.php"; ?>
 </header><!-- #header -->
 
 <!-- start banner Area -->
@@ -233,7 +184,7 @@
                         </div>
                         <div class="col-sm-5">
                             <label for="yes" class="radio-inline"><input type="radio" name="housing" id="housing" value="Yes" onclick="showDormQuestion();"/>Yes </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="housing" id="housing" value="No" onclick="hideDormQuestion();" />No </label>
+                            <label for="no" class="radio-inline"><input type="radio" name="housing" id="housing" value="No" onclick="hideDormQuestion();"/>No </label>
                         </div>
                         <br>
                         <br>
@@ -244,7 +195,7 @@
                             <label for="dorm">Please select your building: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <select name="dorm" id="dorm" class="form-control" style="height: 34px" >
+                            <select name="dorm" id="dorm" class="form-control" style="height: 34px">
                                 <option value="Building 1">Building 1</option>
                                 <option value="Building 2">Building 2</option>
                                 <option value="Building 3">Building 3</option>
@@ -259,7 +210,7 @@
                             <label for="department">Department you work at: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="department" id="department" >
+                            <input type="text" class="form-control" name="department" id="department">
                         </div>
                         <br>
                         <br>
@@ -268,7 +219,7 @@
                             <label for="building">Building you work at: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="building" id="building" >
+                            <input type="text" class="form-control" name="building" id="building">
                         </div>
                         <br>
                         <br>
@@ -277,7 +228,7 @@
                             <label for="supervisor_name">Supervisor name: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="supervisor_name" id="supervisor_name" >
+                            <input type="text" class="form-control" name="supervisor_name" id="supervisor_name">
                         </div>
                         <br>
                         <br>
@@ -286,16 +237,16 @@
                             <label for="supervisor_phone">Supervisor phone number: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="supervisor_phone" id="supervisor_phone" >
+                            <input type="text" class="form-control" name="supervisor_phone" id="supervisor_phone">
                         </div>
                         <br>
                         <br>
                         <br>
                         <div class="col-sm-3">
-                            <label for="supervisor_email">Supervisor phone number: <span class="req"> * </span></label>
+                            <label for="supervisor_email">Supervisor email: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <input type="email" class="form-control" name="supervisor_phone" id="supervisor_phone" >
+                            <input type="email" class="form-control" name="supervisor_email" id="supervisor_email">
                         </div>
                         <br>
                         <br>
@@ -323,8 +274,8 @@
                         </div>
                         <div class="col-sm-5">
                             <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showDormQuestion();"/>Yes </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideDormQuestion();" />No </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Unsure" onclick="hideDormQuestion();" />Unsure </label>
+                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideDormQuestion();"/>No </label>
+                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Unsure" onclick="hideDormQuestion();"/>Unsure </label>
                         </div>
                         <br><br>
                     </div>
@@ -334,12 +285,20 @@
                             <label for="exposure_quest">Please provide a brief description of your most recent exposure: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
+                            <input type="email" class="form-control" name="supervisor_phone" id="supervisor_phone">
+                        </div>
+                        <br><br><br><br>
+                        <div class="col-sm-3">
+                            <label for="exposure_quest">Please provide the date you were exposed: <span class="req"> * </span></label>
+                        </div>
+                        <div class="col-sm-5">
                             <div class="input-group date">
-                                <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                <input type="text" class="form-control" name="exp_date" id="exp_date" required/>
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </div>
                             </div>
                         </div>
-                        <br>
-                        <br>
                     </div>
 
                     <br>
@@ -463,5 +422,10 @@
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/mail-script.js"></script>
 <script src="assets/js/main.js"></script>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>-->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>-->
+<!--<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css"/>-->
+
 </body>
 </html>
