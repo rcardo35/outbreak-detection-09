@@ -30,8 +30,9 @@
 			<link rel="stylesheet" href="assets/css/jquery-ui.css">
 			<link rel="stylesheet" href="assets/css/main.css">
 		</head>
-		<body>	
-		  <header id="header" id="home">
+		<body>	<header id="header" id="home">
+            <?php require_once "navbar.php"; ?>
+        </header><!-- #header --><header id="header" id="home">
 	  		<div class="header-top">
 	  			<div class="container">
 			  		<div class="row">
