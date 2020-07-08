@@ -32,21 +32,19 @@
 
     <!-- Fade In -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <!-- Include in all files -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <!-- datepicker -->
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.15/sorting/datetime-moment.js"></script>
-<!--    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>-->
-<!--    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
-    <script>
+    <script type="text/javascript">
 		function showStudentQuestions() {
 			$("#student_questions").fadeIn();
 		}
@@ -70,10 +68,60 @@
 		function hideNonStudent() {
 			$("#nonStudent_questions").fadeOut();
 		}
-  
+		
+		function showExposure() {
+			$("#exposure_questions").fadeIn();
+		}
+		
+		function hideExposure() {
+			$("#exposure_questions").fadeOut();
+		}
+		
+		function showEval() {
+			$("#evaluated").fadeIn();
+		}
+		
+		function hideEval() {
+			$("#eval").fadeOut();
+		}
+		
 		$(document).ready(function () {
-			$('#exp_date').datepicker();
+			
+			$('#exp_date').datepicker({
+				changeMonth: true, changeYear: true, weekStart: 1,
+			});
 		});
+		
+		function toggleSymptoms() {
+			var noSymptoms = document.getElementById("no_symptoms");
+			
+			var symp1 = document.getElementById("fever");
+			var symp2 = document.getElementById("cough");
+			var symp3 = document.getElementById("shortness_of_breath");
+			
+			if(noSymptoms.checked) {
+				symp1.disabled = true;
+				symp2.disabled = true;
+				symp3.disabled = true;
+			} else {
+				symp1.disabled = false;
+				symp2.disabled = false;
+				symp3.disabled = false;
+			}
+		}
+		
+		$('.optionBox input:checkbox').click(function () {
+			var $inputs = $('.optionBox input:checkbox');
+			if($(this).value() === "No Symptoms") {
+				console.log($(this).value());
+				if($(this).is(':checked')) {  // <-- check if clicked box is currently checked
+					$inputs.not(this).prop('disabled', true); // <-- disable all but checked checkbox
+				} else {  //<-- if checkbox was unchecked
+					$inputs.prop('disabled', false); // <-- enable all checkboxes
+				}
+			}
+		});
+
     </script>
 
     <style>
@@ -90,6 +138,10 @@
         .req {
             color: #C00;
             font-size: 12px;
+        }
+
+        .center {
+            text-align: center;
         }
 
     </style>
@@ -131,7 +183,7 @@
                 <form id="myForm" action="control.php" method="post">
 
                     <div class="form-group" id="name">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="name">Full Name: <span class="req">*</span></label>
                         </div>
                         <div class="col-sm-5">
@@ -141,7 +193,7 @@
                     </div>
 
                     <div class="form-group" id="phone_number">
-                        <div class="col-sm-3" style="float: left">
+                        <div class="col-sm-4">
                             <label for="phone_number">Phone Number: <span class="req">*</span></label>
                         </div>
                         <div class="col-sm-5">
@@ -151,7 +203,7 @@
                     </div>
 
                     <div class="form-group" id="email">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="email">University Email: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -161,7 +213,7 @@
                     </div>
 
                     <div class="form-group" id="univ_status">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="univ_status">Please select your university status: <span class="req"> * </span> </label>
                         </div>
                         <div class="col-sm-5">
@@ -177,9 +229,9 @@
                         <br>
                         <br>
                     </div>
-                    <br>
+
                     <div class="form-group" style="display: none" id="student_questions">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="housing">Do you live in on-campus housing?: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -191,7 +243,7 @@
                     </div>
 
                     <div class="form-group" style="display: none" id="dorm_question">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="dorm">Please select your building: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -202,11 +254,12 @@
                                 <option value="Building 4">Building 4</option>
                             </select>
                         </div>
-                        <br><br>
+                        <br>
+                        <br>
                     </div>
 
                     <div class="form-group" style="display: none" id="nonStudent_questions">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="department">Department you work at: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -215,7 +268,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="building">Building you work at: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -224,7 +277,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="supervisor_name">Supervisor name: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -233,7 +286,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="supervisor_phone">Supervisor phone number: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -242,7 +295,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="supervisor_email">Supervisor email: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -254,7 +307,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="dorm">Places in campus where you have been: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -265,53 +318,102 @@
                                 <option value="Place 4">Place 4</option>
                             </select>
                         </div>
-                        <br><br>
+                        <br>
+                        <br>
                     </div>
-                    <br>
+
                     <div class="form-group">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="exposure">Have you had direct exposure (that you are aware of): <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showDormQuestion();"/>Yes </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideDormQuestion();"/>No </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Unsure" onclick="hideDormQuestion();"/>Unsure </label>
+                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showExposure();"/>Yes </label>
+                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideExposure();"/>No </label>
+                            <label for="unsure" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Unsure" onclick="showExposure();"/>Unsure </label>
                         </div>
-                        <br><br>
+                        <br>
+                        <br>
                     </div>
 
-                    <div class="form-group" style="display: block" id="exposure_questions">
-                        <div class="col-sm-3">
+                    <div class="form-group" style="display: none" id="exposure_questions">
+                        <div class="col-sm-4">
                             <label for="exposure_quest">Please provide a brief description of your most recent exposure: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
                             <input type="email" class="form-control" name="supervisor_phone" id="supervisor_phone">
                         </div>
-                        <br><br><br><br>
-                        <div class="col-sm-3">
+                        <br><br><br>
+                        <div class="col-sm-4">
                             <label for="exposure_quest">Please provide the date you were exposed: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
                             <div class="input-group date">
-                                <input type="text" class="form-control" name="exp_date" id="exp_date" required/>
+                                <input type="text" class="form-control" name="exp_date" id="exp_date" placeholder="DD/MM/YYYY" required/>
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-th"></span>
                                 </div>
                             </div>
                         </div>
+                        <br><br>
                     </div>
 
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <button class="genric-btn primary" style="float: none;">Send Message</button>
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <label for="symptoms">Are currently experiencing any of the following symptoms (Select all that apply): <span class="req"> * </span></label>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="form-check">
+                                <input type="checkbox" name="symptoms[]" id="no_symptoms" value="No Symptoms" onclick="toggleSymptoms();">
+                                <label for="no_symptoms"> No Symptoms
+                                </label><br>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="symptoms[]" id="fever" value="Fever">
+                                <label for="fever "> Fever
+                                </label><br>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="symptoms[]" id="cough" value="Cough">
+                                <label for="cough"> Cough
+                                </label><br>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="symptoms[]" id="shortness_of_breath" value="Shortness of Breath">
+                                <label for="shortness_of_breath"> Shortness of Breath
+                                </label><br>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <br><br><br>
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <label for="exposure">Have you been medically evaluated? <span class="req"> * </span></label>
+                        </div>
+                        <div class="col-sm-5">
+                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showEval();"/>Yes </label>
+                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideEval();"/>No </label>
+                        </div>
+                        <br><br>
+                    </div>
+
+                    <div class="form-group" style="display: none" id="evaluated">
+                        <div class="col-sm-4">
+                            <label for="eval_date">Please provide the date you evaluated: <span class="req"> * </span></label>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="input-group date">
+                                <input type="text" class="form-control" name="eval_date" id="eval_date" placeholder="DD/MM/YYYY" required/>
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="center">
+                        <button class="genric-btn primary">Send Message</button>
+                    </div>
                 </form>
 
             </div>
@@ -422,6 +524,7 @@
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/mail-script.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
 
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>-->
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>-->
