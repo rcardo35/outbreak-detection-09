@@ -24,30 +24,15 @@
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="courses.php">Courses</a></li>
-                <li><a href="events.php">Events</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li class="menu-has-children"><a href="">Blog</a>
+                <li><a href="campus-tracing.php">Campus Tracing</a></li>
+                <li class="menu-has-children"><a href="">Resources</a>
                     <ul>
-                        <li><a href="blog-home.php">Blog Home</a></li>
-                        <li><a href="blog-single.php">Blog Single</a></li>
+                        <li><a href="testing-centers.php">Testing Centers</a></li>
+                        <li><a href="symptoms-survey.php">Check your symptoms!</a></li>
                     </ul>
                 </li>
-                <li class="menu-has-children"><a href="">Pages</a>
-                    <ul>
-                        <li><a href="course-details.php">Course Details</a></li>
-                        <li><a href="event-details.php">Event Details</a></li>
-                        <li><a href="elements.php">Elements</a></li>
-                        <li class="menu-has-children"><a href="">Level 2 </a>
-                            <ul>
-                                <li><a href="#">Item One</a></li>
-                                <li><a href="#">Item Two</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="health-center-login.php">Health Center Staff Login</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
