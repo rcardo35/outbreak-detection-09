@@ -799,7 +799,6 @@
 <script src="assets/js/jquery.tabs.min.js"></script>
 <script src="assets/js/jquery.nice-select.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/mail-script.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
