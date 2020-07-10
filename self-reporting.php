@@ -78,11 +78,11 @@
 		}
 		
 		function showEval() {
-			$("#evaluated").fadeIn();
+			$("#evaluated_questions").fadeIn();
 		}
 		
 		function hideEval() {
-			$("#eval").fadeOut();
+			$("#evaluated_questions").fadeOut();
 		}
 		
 		$(document).ready(function () {
@@ -171,7 +171,7 @@
                 <h1 class="text-white">
                     Self-Reporting
                 </h1>
-                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="contact.php">Self-Reporting</a></p>
+                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>
             </div>
         </div>
     </div>
@@ -350,7 +350,7 @@
                             <label for="exposure_quest">Please provide a brief description of your most recent exposure: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <input type="email" class="form-control" name="supervisor_phone" id="supervisor_phone">
+                            <input type="text" class="form-control" name="exposure_desc" id="exposure_desc">
                         </div>
                         <br><br><br>
                         <div class="col-sm-4">
@@ -401,13 +401,13 @@
                             <label for="exposure">Have you been medically evaluated? <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showEval();"/>Yes </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideEval();"/>No </label>
+                            <label for="yes" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="Yes" onclick="showEval()">Yes </label>
+                            <label for="no" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="No" onclick="hideEval()">No </label>
                         </div>
                         <br><br>
                     </div>
 
-                    <div class="form-group" style="display: none" id="evaluated">
+                    <div class="form-group" style="display: none" id="evaluated_questions">
                         <div class="col-sm-4">
                             <label for="eval_date">Please provide the date you evaluated: <span class="req"> * </span></label>
                         </div>
@@ -422,7 +422,7 @@
                         <br><br>
                     </div>
                     <div class="center">
-                        <button class="primary" id="submit">Send Message</button>
+                        <button class="genric-btn primary" id="submit">Submit Survey</button>
                     </div>
                 </form>
 
