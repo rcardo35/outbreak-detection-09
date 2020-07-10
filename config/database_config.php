@@ -5,10 +5,12 @@
     $password ="bc392e11";
     $charset = "";
     
+    global $conn;
     $dsn = "mysql:host=$host;dbname=$db";
     
     try {
-        $covid_pdo = new PDO($dsn, $user, $password);
+        $conn = new PDO("mysql:host=$host;dbname=$db", $user, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (\PDOException $e){
         throw new \PDOException($e->getMessage(), (int)$e->getCode());
     }
