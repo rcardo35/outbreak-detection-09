@@ -78,11 +78,11 @@
 		}
 		
 		function showEval() {
-			$("#evaluated").fadeIn();
+			$("#evaluated_questions").fadeIn();
 		}
 		
 		function hideEval() {
-			$("#eval").fadeOut();
+			$("#evaluated_questions").fadeOut();
 		}
 		
 		$(document).ready(function () {
@@ -90,6 +90,17 @@
 			$('#exp_date').datepicker({
 				changeMonth: true, changeYear: true, weekStart: 1,
 			});
+		});
+		
+		$('#submit').click(function () {
+			console.log("entered method");
+			checked = $("input[type=checkbox]:checked").length;
+			
+			if($("input[type=checkbox]:checked").length > 0) {
+				alert("You must check at least one checkbox.");
+				return false;
+			}
+			
 		});
 		
 		function toggleSymptoms() {
@@ -160,7 +171,7 @@
                 <h1 class="text-white">
                     Self-Reporting
                 </h1>
-                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="contact.php">Self-Reporting</a></p>
+                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>
             </div>
         </div>
     </div>
@@ -180,7 +191,7 @@
 
                 <p class="req">All fields marked with an asterisk (*) are required.</p>
                 <br>
-                <form id="myForm" action="control.php" method="post">
+                <form id="myForm" action="confirm-self-report.php" method="post">
 
                     <div class="form-group" id="name">
                         <div class="col-sm-4">
@@ -219,11 +230,10 @@
                         <div class="col-sm-5">
                             <label for="student" class="radio-inline"><input type="radio" name="status" id="status" value="Student" onclick="showStudentQuestions(); hideNonStudent();" required/>Student
                             </label>
-                            <label for="Staff" class="radio-inline"><input type="radio" name="status" id="status" value="Staff" onclick="hideStudentQuestions(); showNonStudent(); hideDormQuestion()"
-                                                                           required/>Staff
+                            <label for="Staff" class="radio-inline"><input type="radio" name="status" id="status" value="Staff" onclick="hideStudentQuestions(); showNonStudent(); hideDormQuestion()"/>Staff
                             </label>
                             <label for="Faculty" class="radio-inline"><input type="radio" name="status" id="status" value="Faculty"
-                                                                             onclick="hideStudentQuestions(); showNonStudent(); hideDormQuestion();" required/>Faculty
+                                                                             onclick="hideStudentQuestions(); showNonStudent(); hideDormQuestion();">Faculty
                             </label>
                         </div>
                         <br>
@@ -327,7 +337,7 @@
                             <label for="exposure">Have you had direct exposure (that you are aware of): <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showExposure();"/>Yes </label>
+                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showExposure();" required/>Yes </label>
                             <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideExposure();"/>No </label>
                             <label for="unsure" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Unsure" onclick="showExposure();"/>Unsure </label>
                         </div>
@@ -340,7 +350,7 @@
                             <label for="exposure_quest">Please provide a brief description of your most recent exposure: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <input type="email" class="form-control" name="supervisor_phone" id="supervisor_phone">
+                            <input type="text" class="form-control" name="exposure_desc" id="exposure_desc">
                         </div>
                         <br><br><br>
                         <div class="col-sm-4">
@@ -348,7 +358,7 @@
                         </div>
                         <div class="col-sm-5">
                             <div class="input-group date">
-                                <input type="text" class="form-control" name="exp_date" id="exp_date" placeholder="DD/MM/YYYY" required/>
+                                <input type="text" class="form-control" name="exp_date" id="exp_date" placeholder="DD/MM/YYYY"/>
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-th"></span>
                                 </div>
@@ -369,7 +379,7 @@
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" name="symptoms[]" id="fever" value="Fever">
-                                <label for="fever "> Fever
+                                <label for="fever"> Fever
                                 </label><br>
                             </div>
                             <div class="form-check">
@@ -391,19 +401,19 @@
                             <label for="exposure">Have you been medically evaluated? <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showEval();"/>Yes </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideEval();"/>No </label>
+                            <label for="yes" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="Yes" onclick="showEval()">Yes </label>
+                            <label for="no" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="No" onclick="hideEval()">No </label>
                         </div>
                         <br><br>
                     </div>
 
-                    <div class="form-group" style="display: none" id="evaluated">
+                    <div class="form-group" style="display: none" id="evaluated_questions">
                         <div class="col-sm-4">
                             <label for="eval_date">Please provide the date you evaluated: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
                             <div class="input-group date">
-                                <input type="text" class="form-control" name="eval_date" id="eval_date" placeholder="DD/MM/YYYY" required/>
+                                <input type="text" class="form-control" name="eval_date" id="eval_date" placeholder="DD/MM/YYYY"/>
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-th"></span>
                                 </div>
@@ -412,7 +422,7 @@
                         <br><br>
                     </div>
                     <div class="center">
-                        <button class="genric-btn primary">Send Message</button>
+                        <button class="genric-btn primary" id="submit">Submit Survey</button>
                     </div>
                 </form>
 
@@ -522,13 +532,9 @@
 <script src="assets/js/jquery.tabs.min.js"></script>
 <script src="assets/js/jquery.nice-select.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/mail-script.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
 
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>-->
-<!--<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css"/>-->
 
 </body>
 </html>
