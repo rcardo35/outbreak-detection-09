@@ -14,7 +14,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Education</title>
+    <title>TechPoint University</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--
@@ -47,13 +47,12 @@
         <div class="row fullscreen d-flex align-items-center justify-content-between">
             <div class="banner-content col-lg-9 col-md-12">
                 <h1 class="text-uppercase">
-                    We Ensure better education
-                    for a better world
+                    Help us create a safer campus!
                 </h1>
-                <p class="pt-10 pb-10">
-                    In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.
+                <p style="color: #FFFFFF; font-size: 24px">
+                    By self-reporting if you have been sick, you can help us track COVID-19 cases in our campus...
                 </p>
-                <a href="#" class="primary-btn text-uppercase">Get Started</a>
+                <a href="self-reporting.php" class="primary-btn text-uppercase">Take me to the self-report page</a>
             </div>
         </div>
     </div>
@@ -800,7 +799,6 @@
 <script src="assets/js/jquery.tabs.min.js"></script>
 <script src="assets/js/jquery.nice-select.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/mail-script.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
