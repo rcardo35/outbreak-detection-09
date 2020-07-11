@@ -54,47 +54,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-
     <script type="text/javascript">
-		function showStudentQuestions() {
-			$("#student_questions").fadeIn();
-		}
-		
-		function hideStudentQuestions() {
-			$("#student_questions").fadeOut();
-		}
-		
-		function showDormQuestion() {
-			$("#dorm_question").fadeIn();
-		}
-		
-		function hideDormQuestion() {
-			$("#dorm_question").fadeOut();
-		}
-		
-		function showNonStudent() {
-			$("#nonStudent_questions").fadeIn();
-		}
-		
-		function hideNonStudent() {
-			$("#nonStudent_questions").fadeOut();
-		}
-		
-		function showExposure() {
-			$("#exposure_questions").fadeIn();
-		}
-		
-		function hideExposure() {
-			$("#exposure_questions").fadeOut();
-		}
-		
-		function showEval() {
-			$("#evaluated").fadeIn();
-		}
-		
-		function hideEval() {
-			$("#eval").fadeOut();
-		}
 		
 		$(document).ready(function () {
 			

@@ -31,7 +31,7 @@
                         <li><a href="symptoms-survey.php">Check your symptoms!</a></li>
                     </ul>
                 </li>
-                <li><a href="health-center-login.php">Health Center Staff Login</a></li>
+                <li><a href="health-center-view.php">Health Center Staff Login</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
