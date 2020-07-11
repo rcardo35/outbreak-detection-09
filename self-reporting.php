@@ -34,9 +34,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Include in all files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/panelcss.css">
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
@@ -168,9 +166,9 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
-                <h1 class="text-white">
+                <h2 class="text-white">
                     Self-Reporting
-                </h1>
+                </h2>
                 <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>
             </div>
         </div>
@@ -182,8 +180,8 @@
 <section class="contact-page-area section-gap">
     <div class="container" align="center">
         <div class="panel panel-info" style="width: 90%">
-            <div class="panel-heading"><h3><b style="color: black">Confidential Health Form</b></h3></div>
-            <div class="panel-body" align="left">
+            <div class="panel-heading" style="padding: 25px"><h3><b style="color: black;">Confidential Health Form</b></h3></div>
+            <div class="panel-body" align="left" style="color: #000000">
                 <p>
                     Please be assured your information will be kept confidential and will not be shared with anyone without your explicit permission. Information submitted to this form will be used to
                     determine case tracing on campus... Please complete the following questions.... Thank you for taking the time to providing us with this information in order to help stop the spread
@@ -193,8 +191,8 @@
                 <br>
                 <form id="myForm" action="confirm-self-report.php" method="post">
 
-                    <div class="form-group" id="name">
-                        <div class="col-sm-4">
+                    <div class="form-group row row" id="name">
+                        <div class="col-sm-5">
                             <label for="name">Full Name: <span class="req">*</span></label>
                         </div>
                         <div class="col-sm-5">
@@ -203,8 +201,8 @@
                         <br><br>
                     </div>
 
-                    <div class="form-group" id="phone_number">
-                        <div class="col-sm-4">
+                    <div class="form-group row" id="phone_number">
+                        <div class="col-sm-5">
                             <label for="phone_number">Phone Number: <span class="req">*</span></label>
                         </div>
                         <div class="col-sm-5">
@@ -213,8 +211,8 @@
                         <br><br>
                     </div>
 
-                    <div class="form-group" id="email">
-                        <div class="col-sm-4">
+                    <div class="form-group row" id="email">
+                        <div class="col-sm-5">
                             <label for="email">University Email: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -223,37 +221,38 @@
                         <br><br>
                     </div>
 
-                    <div class="form-group" id="univ_status">
-                        <div class="col-sm-4">
+                    <div class="form-group row" id="univ_status">
+                        <div class="col-sm-5">
                             <label for="univ_status">Please select your university status: <span class="req"> * </span> </label>
                         </div>
-                        <div class="col-sm-5">
-                            <label for="student" class="radio-inline"><input type="radio" name="status" id="status" value="Student" onclick="showStudentQuestions(); hideNonStudent();" required/>Student
-                            </label>
-                            <label for="Staff" class="radio-inline"><input type="radio" name="status" id="status" value="Staff" onclick="hideStudentQuestions(); showNonStudent(); hideDormQuestion()"/>Staff
-                            </label>
-                            <label for="Faculty" class="radio-inline"><input type="radio" name="status" id="status" value="Faculty"
-                                                                             onclick="hideStudentQuestions(); showNonStudent(); hideDormQuestion();">Faculty
-                            </label>
+                        <div class="col-sm-7">
+                            <label for="student" class="radio-inline"><input type="radio" name="status" id="status" value="Student" onclick="showStudentQuestions(); hideNonStudent();" required/>
+                                Student &emsp;
+                            </label><br>
+                            <label for="Staff" class="radio-inline"><input type="radio" name="status" id="status" value="Staff" onclick="hideStudentQuestions(); showNonStudent(); hideDormQuestion()"/>
+                                Staff &emsp;
+                            </label><br>
+                            <label for="Faculty" class="radio-inline"><input type="radio" name="status" id="status" value="Faculty "
+                                                                             onclick="hideStudentQuestions(); showNonStudent(); hideDormQuestion();"> Faculty &emsp;
                         </div>
                         <br>
                         <br>
                     </div>
 
-                    <div class="form-group" style="display: none" id="student_questions">
-                        <div class="col-sm-4">
+                    <div class="form-group row" style="display: none" id="student_questions">
+                        <div class="col-sm-5">
                             <label for="housing">Do you live in on-campus housing?: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <label for="yes" class="radio-inline"><input type="radio" name="housing" id="housing" value="Yes" onclick="showDormQuestion();"/>Yes </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="housing" id="housing" value="No" onclick="hideDormQuestion();"/>No </label>
+                            <label for="yes" class="radio-inline"><input type="radio" name="housing" id="housing" value="Yes" onclick="showDormQuestion();"/> Yes &emsp; </label><br>
+                            <label for="no" class="radio-inline"><input type="radio" name="housing" id="housing" value="No" onclick="hideDormQuestion();"/> No &emsp;</label><br>
                         </div>
                         <br>
                         <br>
                     </div>
 
-                    <div class="form-group" style="display: none" id="dorm_question">
-                        <div class="col-sm-4">
+                    <div class="form-group row" style="display: none" id="dorm_question">
+                        <div class="col-sm-5">
                             <label for="dorm">Please select your building: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -268,8 +267,8 @@
                         <br>
                     </div>
 
-                    <div class="form-group" style="display: none" id="nonStudent_questions">
-                        <div class="col-sm-4">
+                    <div class="form-group row" style="display: none" id="nonStudent_questions">
+                        <div class="col-sm-5">
                             <label for="department">Department you work at: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -278,7 +277,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
                             <label for="building">Building you work at: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -287,7 +286,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
                             <label for="supervisor_name">Supervisor name: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -296,7 +295,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
                             <label for="supervisor_phone">Supervisor phone number: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -305,7 +304,7 @@
                         <br>
                         <br>
                         <br>
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
                             <label for="supervisor_email">Supervisor email: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -316,12 +315,12 @@
                         <br>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-4">
+                    <div class="form-group row">
+                        <div class="col-sm-5">
                             <label for="dorm">Places in campus where you have been: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <select name="campus_places" id="campus_places" class="form-control" style="height: 42px" multiple>
+                            <select name="campus_places" id="campus_places" class="form-control" style="height: 100px; font-size: 14px" multiple>
                                 <option value="Place 1">Place 1</option>
                                 <option value="Place 2">Place 2</option>
                                 <option value="Place 3">Place 3</option>
@@ -332,28 +331,28 @@
                         <br>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-4">
+                    <div class="form-group row">
+                        <div class="col-sm-5">
                             <label for="exposure">Have you had direct exposure (that you are aware of): <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showExposure();" required/>Yes </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideExposure();"/>No </label>
-                            <label for="unsure" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Unsure" onclick="showExposure();"/>Unsure </label>
+                            <label for="yes" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Yes" onclick="showExposure();" required/> Yes &emsp;</label><br>
+                            <label for="no" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="No" onclick="hideExposure();"/> No &emsp;</label><br>
+                            <label for="unsure" class="radio-inline"><input type="radio" name="exposure" id="exposure" value="Unsure" onclick="showExposure();"/> Unsure &emsp;</label>
                         </div>
                         <br>
                         <br>
                     </div>
 
-                    <div class="form-group" style="display: none" id="exposure_questions">
-                        <div class="col-sm-4">
+                    <div class="form-group row" style="display: none" id="exposure_questions">
+                        <div class="col-sm-5">
                             <label for="exposure_quest">Please provide a brief description of your most recent exposure: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
                             <input type="text" class="form-control" name="exposure_desc" id="exposure_desc">
                         </div>
                         <br><br><br>
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
                             <label for="exposure_quest">Please provide the date you were exposed: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -367,48 +366,42 @@
                         <br><br>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-4">
+                    <div class="form-group row">
+                        <div class="col-sm-5">
                             <label for="symptoms">Are currently experiencing any of the following symptoms (Select all that apply): <span class="req"> * </span></label>
                         </div>
-                        <div class="col-sm-5">
-                            <div class="form-check">
-                                <input type="checkbox" name="symptoms[]" id="no_symptoms" value="No Symptoms" onclick="toggleSymptoms();">
-                                <label for="no_symptoms"> No Symptoms
-                                </label><br>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" name="symptoms[]" id="fever" value="Fever">
-                                <label for="fever"> Fever
-                                </label><br>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" name="symptoms[]" id="cough" value="Cough">
-                                <label for="cough"> Cough
-                                </label><br>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" name="symptoms[]" id="shortness_of_breath" value="Shortness of Breath">
-                                <label for="shortness_of_breath"> Shortness of Breath
-                                </label><br>
-                            </div>
-                        </div>
-                        <br><br>
-                    </div>
-                    <br><br><br>
-                    <div class="form-group">
                         <div class="col-sm-4">
+
+                            <input type="checkbox" name="symptoms" id="no_symptoms" value="No Symptoms" onclick="toggleSymptoms();">
+                            <label for="no_symptoms"> No Symptoms
+                            </label><br>
+
+                            <input type="checkbox" name="symptoms" id="fever" value="Fever">
+                            <label for="fever"> Fever
+                            </label><br>
+
+                            <input type="checkbox" name="symptoms" id="cough" value="Cough">
+                            <label for="cough"> Cough
+                            </label><br>
+
+                            <input type="checkbox" name="symptoms" id="shortness_of_breath" value="Shortness of Breath">
+                            <label for="shortness_of_breath"> Shortness of Breath
+                            </label><br>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-5">
                             <label for="exposure">Have you been medically evaluated? <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
-                            <label for="yes" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="Yes" onclick="showEval()">Yes </label>
-                            <label for="no" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="No" onclick="hideEval()">No </label>
+                            <label for="yes" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="Yes" onclick="showEval()"> Yes </label><br>
+                            <label for="no" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="No" onclick="hideEval()"> No </label>
                         </div>
                         <br><br>
                     </div>
 
-                    <div class="form-group" style="display: none" id="evaluated_questions">
-                        <div class="col-sm-4">
+                    <div class="form-group row" style="display: none" id="evaluated_questions">
+                        <div class="col-sm-5">
                             <label for="eval_date">Please provide the date you evaluated: <span class="req"> * </span></label>
                         </div>
                         <div class="col-sm-5">
@@ -533,8 +526,6 @@
 <script src="assets/js/jquery.nice-select.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
-
-
+<!--<script src="assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>-->
 </body>
 </html>
