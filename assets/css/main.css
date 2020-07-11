@@ -2034,12 +2034,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled {
-    transition: all 0.5s;
-    background-color: rgba(4, 9, 30, 0.9)
+    transition: all 0.5s !important;
+    background-color: rgba(4, 9, 30, 0.9) !important;
 }
 
 #header.header-scrolled .main-menu {
-    border-color: transparent
+    border-color: transparent !important;
 }
 
 @media (max-width: 673px) {
@@ -2304,7 +2304,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-gap {
-    padding: 120px 0
+    padding: 40px 0 20px
 }
 
 .alert-msg {
@@ -3014,7 +3014,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-content {
     margin-top: 110px;
-    padding: 90px 0px;
+    padding: 30px 0px;
     text-align: center
 }
 
