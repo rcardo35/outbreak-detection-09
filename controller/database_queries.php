@@ -43,10 +43,11 @@
             $beenExposed            = $_POST['exposure'];
             $exposureDesc           = $_POST['exposureDesc'];
             $exposureDate           = $_POST['exp_date'];
-            $symptoms               = $_POST['symptoms'];
+            $symptoms               = (array) $_POST['symptoms'];
+            $sympList = implode(",", $symptoms);
             $beenMedicallyEvaluated = $_POST['evaluated'];
             
-            $insertQuery = "INSERT INTO heroku_c224005b36bf596.nonstudentcases VALUES (default , '$name', '$phone', '$univEmail', '$deparment', '$building', '$supervisor', '$supervisorPhone', '$supervisorEmail','$campusPlaces', '$beenExposed', '$exposureDesc' ,'$exposureDate', '$symptoms', '$beenMedicallyEvaluated', ' ', ' ') ";
+            $insertQuery = "INSERT INTO heroku_c224005b36bf596.nonstudentcases VALUES (default , '$name', '$phone', '$univEmail', '$deparment', '$building', '$supervisor', '$supervisorPhone', '$supervisorEmail','$campusPlaces', '$beenExposed', '$exposureDesc' ,'$exposureDate', '$sympList', '$beenMedicallyEvaluated', ' ', ' ') ";
     
             $insertResult = $this->dbconn->query($insertQuery);
             if ( ! $insertResult) {
