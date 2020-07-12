@@ -2469,16 +2469,17 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-color: #f7631b;
     color: #fff;
     font-weight: 600;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .banner-content .primary-btn:hover {
     background-color: #fff;
-    color: #f7631b
+    color: #f7631b;
 }
 
 .feature-area {
-    margin-top: -62px
+    margin-top: 40px;
+    margin-bottom: 200px;
 }
 
 .single-feature {
@@ -2486,12 +2487,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-feature .title {
-    background: rgba(255, 255, 255, 0.15);
+    background: #f7631b;
     padding: 20px 0px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
+    transition: all 0.3s ease 0s;
 }
 
 .single-feature .title h4 {
@@ -2519,7 +2520,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-feature:hover .title {
-    background: #f7631b
+    background: rgba(245, 245, 245, 1)
+}
+
+.single-feature:hover .title h4{
+    color: #f7631b
 }
 
 .single-feature:hover .desc-wrap a {
