@@ -41,18 +41,7 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- Fade In -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Include in all files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="assets/css/panelcss.css">
 
     <script type="text/javascript">
 		
@@ -139,10 +128,10 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
-                <h1 class="text-white">
-                    Self-Reporting
-                </h1>
-                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>
+<!--                <h1 class="text-white">-->
+<!--                    Self-Reporting-->
+<!--                </h1>-->
+<!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>-->
             </div>
         </div>
     </div>
@@ -155,14 +144,13 @@
         <div class="panel panel-info" style="width: 90%">
             <div class="panel-heading"><h3><b style="color: black">Confidential Health Form</b></h3></div>
             <div class="panel-body" align="left">
-                <h3 align="center">
-                    Thank you for submitting your answers. Your personal information will not be shared with anyone and will only be used to improve campus reopening efforts!
-                </h3>
-                <br><br>
-                <a href="index.php" class="primary-btn" style="float: right; font-size: 16px">Home</a>
-
+                <p align="center">
+                    Thank you for submitting your answers. Your personal information will not be shared with anyone and will only be used to improve campus reopening efforts! You will be contacted by a school administrator soon.
+                </p>
             </div>
         </div>
+        <a href="index.php" class="primary-btn" style="float: none; font-size: 16px">Home</a>
+        <br><br>
     </div>
     <!--    </div>-->
 </section>
