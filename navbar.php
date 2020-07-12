@@ -25,7 +25,7 @@
             <ul class="nav-menu">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="campus-tracing.php">Campus Tracing</a></li>
-                <li class="menu-has-children"><a href="">Resources</a>
+                <li class="menu-has-children"><a href="resources.php">Resources</a>
                     <ul>
                         <li><a href="testing-centers.php">Testing Centers</a></li>
                         <li><a href="symptoms-survey.php">Check your symptoms!</a></li>
