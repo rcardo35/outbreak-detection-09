@@ -67,6 +67,8 @@
 		
 		$(document).ready(function () {
 			$('#example').DataTable();
+			$('#FacultyTable').DataTable();
+			$('#StaffTable').DataTable();
 			document.getElementById('students').click();
 		});
     </script>
@@ -241,13 +243,105 @@
         </div>
 
         <div id="Staff Table" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
+            <br>
+            <h2><b style="color:darkslategray;">Staff Cases</b></h2>
+            <p style="font-size: 18px">This table contains staff cases being reported and traced. </p>
+            <br>
+            <table id="StaffTable" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Case ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Campus Places</th>
+                    <th>Symptomatic</th>
+                    <th>Medically Confirmed</th>
+                    <th>Confirmed Date</th>
+                    <th>Edit</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Case ID</td>
+                    <td>Name</td>
+                    <td>Phone Number</td>
+                    <td>Email</td>
+                    <td>Department</td>
+                    <td>Campus Places</td>
+                    <td>Symptomatic</td>
+                    <td>Medically Confirmed</td>
+                    <td>Confirmed Date</td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Case ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Campus Places</th>
+                    <th>Symptomatic</th>
+                    <th>Medically Confirmed</th>
+                    <th>Confirmed Date</th>
+                    <th>Edit</th>
+                </tr>
+                </tfoot>
+            </table>
         </div>
 
         <div id="Faculty Table" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+            <br>
+            <h2><b style="color:darkslategray;">Faculty Cases</b></h2>
+            <p style="font-size: 18px">This table contains faculty cases being reported and traced. </p>
+            <br>
+            <table id="FacultyTable" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Case ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Campus Places</th>
+                    <th>Symptomatic</th>
+                    <th>Medically Confirmed</th>
+                    <th>Confirmed Date</th>
+                    <th>Edit</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Case ID</td>
+                    <td>Name</td>
+                    <td>Phone Number</td>
+                    <td>Email</td>
+                    <td>Department</td>
+                    <td>Campus Places</td>
+                    <td>Symptomatic</td>
+                    <td>Medically Confirmed</td>
+                    <td>Confirmed Date</td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Case ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Campus Places</th>
+                    <th>Symptomatic</th>
+                    <th>Medically Confirmed</th>
+                    <th>Confirmed Date</th>
+                    <th>Edit</th>
+                </tr>
+                </tfoot>
+            </table>
         </div>
     </div>
 </section>
