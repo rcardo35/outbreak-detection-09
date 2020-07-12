@@ -1,16 +1,12 @@
 <?php
     require_once("config/database_config.php");
     require_once("controller/database_queries.php");
-    
-    if(!$_POST['username'] == 'admin' && !$_POST['admin'] == 'admin'){
-        header("Location: health-center-login.php?noaccess=true");
-    }
 ?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 <head>
     <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/fav.png">
     <!-- Author Meta -->
@@ -23,7 +19,7 @@
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>Education</title>
-
+    
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--
     CSS
@@ -37,17 +33,10 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    
 
     <link rel="stylesheet" href="assets/css/datablecss.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-    <!-- Datatable -->
-<!--    <link rel="stylesheet" href="assets/css/datablecss.css">-->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
-    
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script type="text/javascript">
 		function openCity(evt, cityName) {
@@ -66,72 +55,218 @@
 		}
 		
 		$(document).ready(function () {
-			$('#example').DataTable();
+			$('#example').DataTable({
+				rowReorder: {
+					selector: 'td:nth-child(2)'
+				},
+				responsive: true
+			});
 			document.getElementById('students').click();
 		});
     </script>
-
+    
     <style>
-        /* Style the tab */
-        .tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
+        /* STRUCTURE */
+        .wrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            min-height: 100%;
+            padding: 20px;
         }
 
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            float: left;
+        #formContent {
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+            background: #fff;
+            padding: 30px;
+            width: 90%;
+            max-width: 450px;
+            position: relative;
+            padding: 0px;
+            -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+            box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        #formFooter {
+            background-color: #f6f6f6;
+            border-top: 1px solid #dce8f1;
+            padding: 25px;
+            text-align: center;
+            -webkit-border-radius: 0 0 10px 10px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* FORM TYPOGRAPHY*/
+
+        input[type=button], input[type=submit], input[type=reset]  {
+            background-color: #56baed;
             border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
+            color: white;
+            padding: 15px 80px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 13px;
+            -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+            box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+            margin: 5px 20px 40px 20px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
 
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
+        input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+            background-color: #39ace7;
         }
 
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #ccc;
+        input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+            -moz-transform: scale(0.95);
+            -webkit-transform: scale(0.95);
+            -o-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+            transform: scale(0.95);
         }
 
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
+        input[type=text], input[type=password] {
+            background-color: #f6f6f6;
+            border: none;
+            color: #0d0d0d;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            width: 85%;
+            border: 2px solid #f6f6f6;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
         }
 
-        .input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
-            height: calc(1.8125rem + 6px)
+        input[type=text]:focus {
+            background-color: #fff;
+            border-bottom: 2px solid #5fbae9;
         }
 
-        #example_length {
-            height: calc(1.8125rem + 6px) !important;
+        input[type=text]:placeholder {
+            color: #cccccc;
+        }
+
+        /* Simple CSS3 Fade-in-down Animation */
+        .fadeInDown {
+            -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        @-webkit-keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /* Simple CSS3 Fade-in Animation */
+        @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+        .fadeIn {
+            opacity:0;
+            -webkit-animation:fadeIn ease-in 1;
+            -moz-animation:fadeIn ease-in 1;
+            animation:fadeIn ease-in 1;
+
+            -webkit-animation-fill-mode:forwards;
+            -moz-animation-fill-mode:forwards;
+            animation-fill-mode:forwards;
+
+            -webkit-animation-duration:1s;
+            -moz-animation-duration:1s;
+            animation-duration:1s;
+        }
+
+        .fadeIn.second {
+            -webkit-animation-delay: 0.6s;
+            -moz-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+
+        .fadeIn.third {
+            -webkit-animation-delay: 0.8s;
+            -moz-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+        }
+
+        .fadeIn.fourth {
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        /* Simple CSS3 Fade-in Animation */
+        .underlineHover:after {
+            display: block;
+            left: 0;
+            bottom: -10px;
+            width: 0;
+            height: 2px;
+            background-color: #56baed;
+            content: "";
+            transition: width 0.2s;
+        }
+
+        .underlineHover:hover {
+            color: #0d0d0d;
+        }
+
+        .underlineHover:hover:after{
+            width: 100%;
         }
 
         .center {
             text-align-last: center;
         }
         
-        .modal-header{
-            text-align-last: left !important;
-        }
-
-        .modal-body {
-            max-height: calc(100vh - 210px);
-            overflow-y: auto;
-        }
         .req {
             color: #C00;
-            font-size: 12px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -157,99 +292,35 @@
 <!-- End banner Area -->
 
 <!-- Start contact-page Area -->
-<section class="contact-page-area section-gap">
-    <div class="container" style="width: 140%">
-        <h1 class="center">Campus Tracing Tables</h1>
+<section class="contact-page-area section-gap" style="width: 100%">
+    <div class="container" style="width: 100%">
+        <h1 class="center">Healthcare Center Staff Login</h1>
         <br>
-        <div class="tab">
-            <button class="tablinks" id="students" onclick="openCity(event, 'Student Table')">Student Table</button>
-            <button class="tablinks" onclick="openCity(event, 'Staff Table')">Staff Table</button>
-            <button class="tablinks" onclick="openCity(event, 'Faculty Table')">Faculty Table</button>
-        </div>
+        <h3 class="center req">Please note this page is for healthcare center administrators only. If you are a student and would like to see the cases in campus please click here: <a href="campus-tracing.php">Campus Tracing</a></h3>
+        
+        <br>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <br><br>
+                <!-- Login Form -->
+                <form action="health-center-view.php" method="post">
+                    <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                    <?php
+                        if (isset($_GET['noaccess'])) {
+                            echo "<div style='color:red'>You do not have permission to access this website!</div><br>";
+                        }
+                    ?>
+                </form>
+                <!-- Remind Password -->
+                <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a>
+                </div>
 
-        <div id="Student Table" class="tabcontent">
-            <br>
-            <h2><b style="color:darkslategray;">Student Cases</b></h2>
-            <p style="font-size: 18px">This table contains student cases being reported and traced. </p>
-            <br>
-
-            <table id="example" class="table table-striped table-bordered" style="width:100%">
-                <thead>
-                <tr>
-                    <th>Case ID</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Campus Housing</th>
-                    <th>Campus Places</th>
-                    <th>Symptomatic</th>
-                    <th>Medically Confirmed</th>
-                    <th>Confirmed Date</th>
-                    <th>Edit</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-                    
-                    $stmt = $conn->query("SELECT * FROM heroku_c224005b36bf596.studentcases")->fetchAll(PDO::FETCH_ASSOC);
-                    foreach ($stmt
-                    
-                             as $row) {
-                        
-                        $caseID        = $row['CaseID'];
-                        $name          = $row['FullName'];
-                        $phone         = $row['PhoneNumber'];
-                        $email         = $row['UniversityEmail'];
-                        $housing       = $row['CampusHousing'];
-                        $dorm          = $row['DormBuilding'];
-                        $campusPlaces  = $row['CampusPlaces'];
-                        $symptoms      = $row['Symptoms'];
-                        $medConfirmed  = $row['BeenMedicallyConfirmed'];
-                        $confirmedDate = $row['ConfirmedDate'];
-                        ?>
-                        <tr>
-                            <td> <?= $caseID ?> </td>
-                            <td> <?= $name ?></td>
-                            <td> <?= $phone ?></td>
-                            <td> <?= $email ?></td>
-                            <td> <?= $dorm ?></td>
-                            <td> <?= $campusPlaces ?></td>
-                            <td> <?= $symptoms ?></td>
-                            <td> <?= $medConfirmed ?></td>
-                            <td> <?= $confirmedDate ?></td>
-                            <td>
-                                <button type="button" class="btn btn-info edit_data" id="<?php echo $row['CaseID']; ?>"><i class="fa fa-edit"></i><br</button>
-                            </td>
-                        </tr>
-                    <?php } ?>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th>Case ID</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Campus Housing</th>
-                    <th>Campus Places</th>
-                    <th>Symptomatic</th>
-                    <th>Medically Confirmed</th>
-                    <th>Confirmed Date</th>
-                    <th>Edit</th>
-                </tr>
-                </tfoot>
-            </table>
+            </div>
         </div>
-
-        <div id="Staff Table" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
-        </div>
-
-        <div id="Faculty Table" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
-        </div>
-    </div>
+    
 </section>
 <!-- End contact-page Area -->
 
@@ -379,61 +450,5 @@
 <!--<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>-->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
-
-
-<script>
-	// $(document).ready(function(){
-	// 	function alignModal(){
-	// 		var modalDialog = $(this).find(".modal-dialog");
-	//
-	// 		// Applying the top margin on modal dialog to align it vertically center
-	// 		modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
-	// 	}
-	// 	// Align modal when it is displayed
-	// 	$(".modal").on("shown.bs.modal", alignModal);
-	//
-	// 	// Align modal when user resize the window
-	// 	$(window).on("resize", function(){
-	// 		$(".modal:visible").each(alignModal);
-	// 	});
-	// });
-	
-	$(document).on('click', '.edit_data', function () {
-		var caseID = $(this).attr('id');
-		$.ajax({
-			url: "edit-case.php",
-			type: "post",
-			data: {caseID: caseID},
-			success: function (data) {
-				$("#info_update").html(data);
-				$("#editData").modal('show');
-			}
-		});
-	});
-	
-	$(document).on('click', '#update', function () {
-		var caseID = $(this).attr('id');
-		var symptoms = [];
-  
-		$('#updateForm input:checkbox[name=symptoms]').each(function () {
-			
-			if($(this).is(":checked")) {
-				symptoms.push($(this).val());
-			}
-		});
-		symptoms = symptoms.join(',');
-		$('input[name="symptoms"]').val(symptoms);
-		
-		$.ajax({
-			url: "update-case.php", type: "post", data: $("#updateForm").serialize() + "&symptoms=" + symptoms, success: function (data) {
-				alert("Record updated successfully");
-				$("#editData").modal('hide');
-				location.reload();
-			}
-		});
-	});
-	
- 
-</script>
 </body>
 </html>
