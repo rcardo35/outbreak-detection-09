@@ -14,7 +14,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Education</title>
+    <title>Resources</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--
@@ -42,10 +42,10 @@
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    Blog Details Page
+                    Resources
                 </h1>
-                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span><a href="blog-home.php">Blog </a> <span class="lnr lnr-arrow-right"></span> <a
-                            href="blog-single.php"> Blog Details Page</a></p>
+<!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span><a href="blog-home.php">Blog </a> <span class="lnr lnr-arrow-right"></span> <a-->
+<!--                            href="blog-single.php"> Blog Details Page</a></p>-->
             </div>
         </div>
     </div>
@@ -58,41 +58,33 @@
         <div class="row">
             <div class="col-lg-8 posts-list">
                 <div class="single-post row">
-                    <div class="col-lg-12">
-                        <div class="feature-img">
-                            <img class="img-fluid" src="assets/img/blog/feature-img1.jpg" alt="">
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-12">-->
+<!--                        <div class="feature-img">-->
+<!--                            <img class="img-fluid" src="assets/img/blog/feature-img1.jpg" alt="">-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="col-lg-3  col-md-3 meta-details">
                         <ul class="tags">
-                            <li><a href="#">Food,</a></li>
-                            <li><a href="#">Technology,</a></li>
-                            <li><a href="#">Politics,</a></li>
-                            <li><a href="#">Lifestyle</a></li>
+                            <li>COVID-19,</li><br>
+                            <li>Community,</li><br>
+                            <li>Resources</li>
                         </ul>
                         <div class="user-details row">
-                            <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
                             <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-                            <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-                            <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
                             <ul class="social-links col-lg-12 col-md-12 col-6">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-9">
-                        <h3 class="mt-20 mb-20">Astronomy Binoculars A Great Alternative</h3>
-                        <p class="excert">
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study
-                            materials yourself at a fraction.
+                    <div class="col-lg-9 col-md-9 quotes">
+                        <h3 class="mt-20 mb-20">Testing expanded in the city!</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, veri soluta no eam, ei nulla omnesque voluptaria vis. Duo in dolorem mandamus, discere sensibus repudiandae per an. Eu mei tacimates delicatissimi, sanctus delenit ad nam. Elit mucius accusata eam no, nonumy aliquip inciderint quo ne. No est viris perpetua, duo etiam summo munere ea.
                         </p>
                         <p>
-                            Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials
-                            yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through
-                            a self-imposed
+                            Aliquam dissentiunt eum et. Duo ex ancillae suscipit. An saepe ornatus suscipit mei, expetenda consulatu patrioque cum id, sapientem elaboraret contentiones pro no. Id sonet habemus expetenda eos, vel dicta ignota putant ea, at vim labore causae.
                         </p>
                         <p>
                             Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials
@@ -153,104 +145,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="comments-area">
-                    <h4>05 Comments</h4>
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="assets/img/blog/c1.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Emilly Blunt</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="reply-btn">
-                                <a href="" class="btn-reply text-uppercase">reply</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-list left-padding">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="assets/img/blog/c2.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Elsie Cunningham</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="reply-btn">
-                                <a href="" class="btn-reply text-uppercase">reply</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-list left-padding">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="assets/img/blog/c3.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Annie Stephens</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="reply-btn">
-                                <a href="" class="btn-reply text-uppercase">reply</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="assets/img/blog/c4.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Maria Luna</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="reply-btn">
-                                <a href="" class="btn-reply text-uppercase">reply</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="assets/img/blog/c5.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Ina Hayes</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="reply-btn">
-                                <a href="" class="btn-reply text-uppercase">reply</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="comment-form">
                     <h4>Leave a Comment</h4>
                     <form>
@@ -281,32 +175,15 @@
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
-                    <div class="single-sidebar-widget user-info-widget">
-                        <img src="assets/img/blog/user-info.png" alt="">
-                        <a href="#"><h4>Charlie Barber</h4></a>
-                        <p>
-                            Senior blog writer
-                        </p>
-                        <ul class="social-links">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                        <p>
-                            Boot camps have its supporters andit sdetractors. Some people do not understand why you should have to spend money on boot camp when you can get. Boot camps have itssuppor
-                            ters andits detractors.
-                        </p>
-                    </div>
                     <div class="single-sidebar-widget popular-post-widget">
-                        <h4 class="popular-title">Popular Posts</h4>
+                        <h4 class="popular-title">Most recent news</h4>
                         <div class="popular-post-list">
                             <div class="single-post-list d-flex flex-row align-items-center">
                                 <div class="thumb">
                                     <img class="img-fluid" src="assets/img/blog/pp1.jpg" alt="">
                                 </div>
                                 <div class="details">
-                                    <a href="blog-single.php"><h6>Space The Final Frontier</h6></a>
+                                    <a href="resources.php"><h6>Space The Final Frontier</h6></a>
                                     <p>02 Hours ago</p>
                                 </div>
                             </div>
@@ -315,7 +192,7 @@
                                     <img class="img-fluid" src="assets/img/blog/pp2.jpg" alt="">
                                 </div>
                                 <div class="details">
-                                    <a href="blog-single.php"><h6>The Amazing Hubble</h6></a>
+                                    <a href="resources.php"><h6>The Amazing Hubble</h6></a>
                                     <p>02 Hours ago</p>
                                 </div>
                             </div>
@@ -324,7 +201,7 @@
                                     <img class="img-fluid" src="assets/img/blog/pp3.jpg" alt="">
                                 </div>
                                 <div class="details">
-                                    <a href="blog-single.php"><h6>Astronomy Or Astrology</h6></a>
+                                    <a href="resources.php"><h6>Astronomy Or Astrology</h6></a>
                                     <p>02 Hours ago</p>
                                 </div>
                             </div>
@@ -333,7 +210,7 @@
                                     <img class="img-fluid" src="assets/img/blog/pp4.jpg" alt="">
                                 </div>
                                 <div class="details">
-                                    <a href="blog-single.php"><h6>Asteroids telescope</h6></a>
+                                    <a href="resources.php"><h6>Asteroids telescope</h6></a>
                                     <p>02 Hours ago</p>
                                 </div>
                             </div>
@@ -341,53 +218,6 @@
                     </div>
                     <div class="single-sidebar-widget ads-widget">
                         <a href="#"><img class="img-fluid" src="assets/img/blog/ads-banner.jpg" alt=""></a>
-                    </div>
-                    <div class="single-sidebar-widget post-category-widget">
-                        <h4 class="category-title">Post Catgories</h4>
-                        <ul class="cat-list">
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Technology</p>
-                                    <p>37</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Lifestyle</p>
-                                    <p>24</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Fashion</p>
-                                    <p>59</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Art</p>
-                                    <p>29</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Food</p>
-                                    <p>15</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Architecture</p>
-                                    <p>09</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Adventure</p>
-                                    <p>44</p>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                     <div class="single-sidebar-widget newsletter-widget">
                         <h4 class="newsletter-title">Newsletter</h4>
@@ -412,23 +242,6 @@
                         <p class="text-bottom">
                             You can unsubscribe at any time
                         </p>
-                    </div>
-                    <div class="single-sidebar-widget tag-cloud-widget">
-                        <h4 class="tagcloud-title">Tag Clouds</h4>
-                        <ul>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Architecture</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Art</a></li>
-                            <li><a href="#">Adventure</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Adventure</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
