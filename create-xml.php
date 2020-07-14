@@ -1,37 +1,41 @@
 <?php
-    
-    require_once("config/database_config.php");
-    
     // Start XML file, create parent node
-    
-    $dom = new DOMDocument("1.0");
-    $node = $dom->createElement("markers");
-    $parnode = $dom->appendChild($node);
+    function parseToXML($htmlStr)
+    {
+        $xmlStr=str_replace('<','&lt;',$htmlStr);
+        $xmlStr=str_replace('>','&gt;',$xmlStr);
+        $xmlStr=str_replace('"','&quot;',$xmlStr);
+        $xmlStr=str_replace("'",'&#39;',$xmlStr);
+        $xmlStr=str_replace("&",'&amp;',$xmlStr);
+        return $xmlStr;
+    }
     
     // Select all the rows in the markers table
-    
-    $conn->$query = "SELECT * FROM 'map-markers' WHERE 1";
-    $result = mysql_query($conn->$query);
-    if (!$result) {
-        die('Invalid query: ' . mysql_error());
+    $mysqli = new mysqli("us-cdbr-east-02.cleardb.com", "ba1b3bebb866bc", "bc392e11", "heroku_c224005b36bf596");
+
+    $stmt = $mysqli->query("SELECT * FROM map WHERE 1");
+    if (!$stmt) {
+        die($mysqli->error);
     }
-    
     header("Content-type: text/xml");
-    
-    // Iterate through the rows, adding XML nodes for each
-    
-    while ($row = @mysql_fetch_assoc($result)){
+    // Start XML file, echo parent node
+    echo "<?xml version='1.0' ?>";
+    echo '<markers>';
+    $ind=0;
+    // Iterate through the rows, printing XML nodes for each
+    while ($row = @mysqli_fetch_assoc($stmt)){
         // Add to XML document node
-        $node = $dom->createElement("marker");
-        $newnode = $parnode->appendChild($node);
-        $newnode->setAttribute("id",$row['id']);
-        $newnode->setAttribute("name",$row['name']);
-        $newnode->setAttribute("address", $row['address']);
-        $newnode->setAttribute("lat", $row['lat']);
-        $newnode->setAttribute("lng", $row['lng']);
-        $newnode->setAttribute("type", $row['type']);
+        echo '<marker ';
+        echo 'id="' . $row['id'] . '" ';
+        echo 'name="' . parseToXML($row['name']) . '" ';
+        echo 'address="' . parseToXML($row['address']) . '" ';
+        echo 'lat="' . $row['lat'] . '" ';
+        echo 'lng="' . $row['lng'] . '" ';
+        echo 'type="' . $row['type'] . '" ';
+        echo '/>';
+        $ind = $ind + 1;
     }
-    
-    echo $dom->saveXML();
-    
-    ?>
+    // End XML file
+    echo '</markers>';
+?>
+
