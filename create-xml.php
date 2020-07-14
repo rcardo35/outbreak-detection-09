@@ -13,7 +13,14 @@
     // Select all the rows in the markers table
     $mysqli = new mysqli("us-cdbr-east-02.cleardb.com", "ba1b3bebb866bc", "bc392e11", "heroku_c224005b36bf596");
 
-    $stmt = $mysqli->query("SELECT * FROM map WHERE 1");
+    $stmt = $mysqli->query("SELECT m.*
+                           FROM (heroku_c224005b36bf596.map m
+                                 LEFT JOIN heroku_c224005b36bf596.studentcases sc ON m.name = sc.CampusPlaces
+                                 LEFT JOIN heroku_c224005b36bf596.nonstudentcases nsc ON m.name = nsc.CampusPlaces)
+                           WHERE (
+                                  ((sc.CaseID IS NOT NULL) AND (sc.BeenMedicallyConfirmed = 'Yes'))
+                                  OR ((nsc.CaseID IS NOT NULL) AND (nsc.BeenMedicallyConfirmed = 'Yes')))
+                           GROUP BY m.name;");
     if (!$stmt) {
         die($mysqli->error);
     }

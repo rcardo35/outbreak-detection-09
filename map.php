@@ -2,7 +2,7 @@
 <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <title>Using MySQL and PHP with Google Maps</title>
+    <title>Campus COVID Cases</title>
     <style>
         /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
@@ -34,8 +34,8 @@
 	
 	function initMap() {
 		var map = new google.maps.Map(document.getElementById('map'), {
-			center: new google.maps.LatLng(-33.863276, 151.207977),
-			zoom: 12
+			center: new google.maps.LatLng(39.175470, -86.512421),
+			zoom: 16
 		});
 		var infoWindow = new google.maps.InfoWindow;
 		
