@@ -1,14 +1,10 @@
-<?php
-    require_once("create-xml.php");
-?>
-
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 <head>
 <!-- Mobile Specific Meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Favicon-->
-<link rel="shortcut icon" href="assets/img/fav.png">
+<!--<link rel="shortcut icon" href="assets/img/fav.png">-->
 <!-- Author Meta -->
 <meta name="author" content="colorlib">
 <!-- Meta Description -->
@@ -123,7 +119,7 @@ Campus COVID Cases
         var infoWindow = new google.maps.InfoWindow;
         
         // Change this depending on the name of your PHP or XML file
-        downloadUrl('map/text.xml', function(data) {
+        downloadUrl('create-xml.php', function(data) {
                     var xml = data.responseXML;
                     var markers = xml.documentElement.getElementsByTagName('markers');
                     Array.prototype.forEach.call(markers, function(markerElem) {
@@ -179,7 +175,7 @@ Campus COVID Cases
     function doNothing() {}
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBENGN2akXMeKnda6n-g0KA-HnHsWw540&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBENGN2akXMeKnda6n-g0KA-HnHsWw540=initMap">
     </script>
     </div>
 
