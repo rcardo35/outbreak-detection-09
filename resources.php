@@ -29,6 +29,12 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <header id="header" id="home">
@@ -44,8 +50,6 @@
                 <h1 class="text-white">
                     Resources
                 </h1>
-<!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span><a href="blog-home.php">Blog </a> <span class="lnr lnr-arrow-right"></span> <a-->
-<!--                            href="blog-single.php"> Blog Details Page</a></p>-->
             </div>
         </div>
     </div>
@@ -58,19 +62,17 @@
         <div class="row">
             <div class="col-lg-8 posts-list">
                 <div class="single-post row">
-<!--                    <div class="col-lg-12">-->
-<!--                        <div class="feature-img">-->
-<!--                            <img class="img-fluid" src="assets/img/blog/feature-img1.jpg" alt="">-->
-<!--                        </div>-->
-<!--                    </div>-->
+
                     <div class="col-lg-3  col-md-3 meta-details">
                         <ul class="tags">
-                            <li>COVID-19,</li><br>
-                            <li>Community,</li><br>
-                            <li>Resources</li>
+                            <li>COVID-19,</li>
+                            <br>
+                            <li>Reopening,</li>
+                            <br>
+                            <li>University,</li>
                         </ul>
                         <div class="user-details row">
-                            <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
+                            <p class="date col-lg-12 col-md-12 col-6"><a href="#">24 Aug, 2020</a> <span class="lnr lnr-calendar-full"></span></p>
                             <ul class="social-links col-lg-12 col-md-12 col-6">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -79,94 +81,73 @@
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-9 quotes">
-                        <h3 class="mt-20 mb-20">Testing expanded in the city!</h3>
+                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html" target="_blank"><h3 class="mt-20 mb-20">Guidance for Reopening Campus
+                                Operations</h3></a>
                         <p>
-                            Lorem ipsum dolor sit amet, veri soluta no eam, ei nulla omnesque voluptaria vis. Duo in dolorem mandamus, discere sensibus repudiandae per an. Eu mei tacimates delicatissimi, sanctus delenit ad nam. Elit mucius accusata eam no, nonumy aliquip inciderint quo ne. No est viris perpetua, duo etiam summo munere ea.
-                        </p>
-                        <p>
-                            Aliquam dissentiunt eum et. Duo ex ancillae suscipit. An saepe ornatus suscipit mei, expetenda consulatu patrioque cum id, sapientem elaboraret contentiones pro no. Id sonet habemus expetenda eos, vel dicta ignota putant ea, at vim labore causae.
-                        </p>
-                        <p>
-                            Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials
-                            yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through
-                            a self-imposed
+                            As some institutions of higher education (IHE) open in the United States, the Centers for Disease Control and Prevention (CDC) offers the following considerations for ways in which IHEs can help protect students and employees (e.g., faculty, staff, and administrators) and slow the spread of the Coronavirus Disease 2019 (COVID-19). IHEs vary considerably in geographic location, size, and structure. As such, IHE officials can determine... <br>
+                            <span style="float:right;"><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/schools.html" target="_blank">Learn more! <i
+                                            class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                         </p>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="quotes">
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study
-                            materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.
-                        </div>
-                        <div class="row mt-30 mb-30">
-                            <div class="col-6">
-                                <img class="img-fluid" src="assets/img/blog/post-img1.jpg" alt="">
-                            </div>
-                            <div class="col-6">
-                                <img class="img-fluid" src="assets/img/blog/post-img2.jpg" alt="">
-                            </div>
-                            <div class="col-lg-12 mt-30">
-                                <p>
-                                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE
-                                    study materials yourself at a fraction of the camp price. However, who has the willpower.
-                                </p>
-                                <p>
-                                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE
-                                    study materials yourself at a fraction of the camp price. However, who has the willpower.
-                                </p>
-                            </div>
+
+                    <div class="col-lg-3  col-md-3 meta-details">
+                        <ul class="tags">
+                            <li>COVID-19,</li>
+                            <br>
+                            <li>Community,</li>
+                            <br>
+                            <li>Resources</li>
+                        </ul>
+                        <div class="user-details row">
+                            <p class="date col-lg-12 col-md-12 col-6"><a href="#">14 July, 2020</a> <span class="lnr lnr-calendar-full"></span></p>
+                            <ul class="social-links col-lg-12 col-md-12 col-6">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="navigation-area">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                            <div class="thumb">
-                                <a href="#"><img class="img-fluid" src="assets/img/blog/prev.jpg" alt=""></a>
-                            </div>
-                            <div class="arrow">
-                                <a href="#"><span class="lnr text-white lnr-arrow-left"></span></a>
-                            </div>
-                            <div class="detials">
-                                <p>Prev Post</p>
-                                <a href="#"><h4>Space The Final Frontier</h4></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                            <div class="detials">
-                                <p>Next Post</p>
-                                <a href="#"><h4>Telescopes 101</h4></a>
-                            </div>
-                            <div class="arrow">
-                                <a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
-                            </div>
-                            <div class="thumb">
-                                <a href="#"><img class="img-fluid" src="assets/img/blog/next.jpg" alt=""></a>
-                            </div>
+                    <div class="col-lg-9 col-md-9 quotes">
+                        <a href="https://www.coronavirus.in.gov/2524.htm" target="_blank"><h3 class="mt-20 mb-20">Testing expanded in the city!</h3></a>
+                        <p>
+                            Healthcare providers may order a test for any patient who needs one based on their clinical evaluation.
+                            Testing at the Optum sites is now open for anyone who lives or works in Indiana. There are no other testing requirements...<br>
+                            <span style="float:right;"><a href="https://www.coronavirus.in.gov/2524.htm" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3  col-md-3 meta-details">
+                        <ul class="tags">
+                            <li>COVID-19,</li>
+                            <br>
+                            <li>Community,</li>
+                            <br>
+                            <li>Resources,</li>
+                            <br>
+                            <li>Mental Health</li>
+                        </ul>
+                        <div class="user-details row">
+                            <p class="date col-lg-12 col-md-12 col-6"><a href="#">03 June, 2020</a> <span class="lnr lnr-calendar-full"></span></p>
+                            <ul class="social-links col-lg-12 col-md-12 col-6">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="col-lg-9 col-md-9 quotes">
+                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/managing-stress-anxiety.html" target="_blank">
+                            <h3 class="mt-20 mb-20">Mental Health and Coping During Covid</h3></a>
+                        <p>
+                            The coronavirus disease 2019 (COVID-19) pandemic may be stressful for people. Fear and anxiety about a new disease and what could happen can be overwhelming and cause strong emotions in adults and children. Public health actions, such as social distancing, can make people feel isolated and lonely and can increase stress and anxiety. However, these actions are necessary to reduce the spread of COVID-19. <strong style="color: black"> Coping with stress in a healthy way will make you, the people you care about, and your community stronger. </strong><br>
+                            <span style="float:right;"><a href="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/managing-stress-anxiety.html" target="_blank">Learn more! <i
+                                            class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
+                        </p>
+                    </div>
                 </div>
-                <div class="comment-form">
-                    <h4>Leave a Comment</h4>
-                    <form>
-                        <div class="form-group form-inline">
-                            <div class="form-group col-lg-6 col-md-12 name">
-                                <input type="text" class="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'">
-                            </div>
-                            <div class="form-group col-lg-6 col-md-12 email">
-                                <input type="email" class="form-control" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"
-                                      required=""></textarea>
-                        </div>
-                        <a href="#" class="primary-btn text-uppercase">Post Comment</a>
-                    </form>
-                </div>
+                <a href="#" class="primary-btn text-uppercase" style="float: right">Load More Articles</a>
             </div>
+
             <div class="col-lg-4 sidebar-widgets">
                 <div class="widget-wrap">
                     <div class="single-sidebar-widget search-widget">
@@ -176,42 +157,26 @@
                         </form>
                     </div>
                     <div class="single-sidebar-widget popular-post-widget">
-                        <h4 class="popular-title">Most recent news</h4>
+                        <h4 class="popular-title">More resources</h4>
                         <div class="popular-post-list">
                             <div class="single-post-list d-flex flex-row align-items-center">
-                                <div class="thumb">
-                                    <img class="img-fluid" src="assets/img/blog/pp1.jpg" alt="">
-                                </div>
                                 <div class="details">
-                                    <a href="resources.php"><h6>Space The Final Frontier</h6></a>
-                                    <p>02 Hours ago</p>
+                                    <a href="testing-centers.php" target="_blank"><h4>Find test centers near campus &ensp;&ensp;&ensp;&ensp;</h4>
+                                        <p style="float: right">Updated 02 Hours ago</p></a>
                                 </div>
                             </div>
+                            <hr>
                             <div class="single-post-list d-flex flex-row align-items-center">
-                                <div class="thumb">
-                                    <img class="img-fluid" src="assets/img/blog/pp2.jpg" alt="">
-                                </div>
                                 <div class="details">
-                                    <a href="resources.php"><h6>The Amazing Hubble</h6></a>
-                                    <p>02 Hours ago</p>
+                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/index.html" target="_blank"><h4>What to do if you think you are sick</h4>
+                                        <p style="float: right">Updated 06 Hours ago</p></a>
                                 </div>
                             </div>
+                            <hr>
                             <div class="single-post-list d-flex flex-row align-items-center">
-                                <div class="thumb">
-                                    <img class="img-fluid" src="assets/img/blog/pp3.jpg" alt="">
-                                </div>
                                 <div class="details">
-                                    <a href="resources.php"><h6>Astronomy Or Astrology</h6></a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="single-post-list d-flex flex-row align-items-center">
-                                <div class="thumb">
-                                    <img class="img-fluid" src="assets/img/blog/pp4.jpg" alt="">
-                                </div>
-                                <div class="details">
-                                    <a href="resources.php"><h6>Asteroids telescope</h6></a>
-                                    <p>02 Hours ago</p>
+                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" target="_blank"><h4>Check your Symptoms! <br><span style="font-size: small; color: gray">CDC Self-Checker Page</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</h4>
+                                        <p style="float: right">Updated 20 days ago</p></a>
                                 </div>
                             </div>
                         </div>
@@ -222,8 +187,7 @@
                     <div class="single-sidebar-widget newsletter-widget">
                         <h4 class="newsletter-title">Newsletter</h4>
                         <p>
-                            Here, I focus on a range of items and features that we use in life without
-                            giving them a second thought.
+                            If you would like to keep up with the latest Covid-19 related news, please subscribe to our newsletter.
                         </p>
                         <div class="form-group d-flex flex-row">
                             <div class="col-autos">
@@ -233,11 +197,10 @@
 
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
-                                           onblur="this.placeholder = 'Enter email'">
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter Your Email">
                                 </div>
                             </div>
-                            <a href="#" class="bbtns">Subcribe</a>
+                            <a class="bbtns">Subcribe</a>
                         </div>
                         <p class="text-bottom">
                             You can unsubscribe at any time

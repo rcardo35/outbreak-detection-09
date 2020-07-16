@@ -83,10 +83,10 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
-                <!--                <h1 class="text-white">-->
-                <!--                    Testing Centers-->
-                <!--                </h1>-->
-                <!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="testing-centers.php"> Popular Courses</a></p>-->
+                <h1 class="text-white">
+                    Testing Centers
+                </h1>
+<!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="testing-centers.php"> Popular Courses</a></p>-->
             </div>
         </div>
     </div>
@@ -109,13 +109,12 @@
                 <div class="thumb-wrap relative">
                     <div class="thumb relative">
                         <div class="overlay overlay-bg"></div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.158633942006!2d-86.53412878434338!3d39.12562147953611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c66484f955555%3A0xecf37ddbf3b94e47!2sLogistics%20Health%20COVID-19%20Test%20Site!5e0!3m2!1sen!2sus!4v1594586502417!5m2!1sen!2sus"
-                                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
                 <div class="details">
-                    <a href="https://goo.gl/maps/6K9DxjGyPf5XtpJ27" target="_blank">
-                        <h4>Logistics Health COVID-19 Test Site <br><span class="req">Medical Laboratory</span></h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.1586339420082!2d-86.53412878464286!3d39.12562147953606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c66484f955555%3A0xecf37ddbf3b94e47!2sLogistics%20Health%20COVID-19%20Test%20Site!5e0!3m2!1sen!2sus!4v1594763292310!5m2!1sen!2sus"
+                            width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <h4>Logistics Health COVID-19 Test Site <br><span class="req">Medical Laboratory</span></h4>
                     </a>
                     <p>
                         <i class="fa fa-map-marker" aria-hidden="true"></i> Bloomington, IN<br>
@@ -130,13 +129,12 @@
                 <div class="thumb-wrap relative">
                     <div class="thumb relative">
                         <div class="overlay overlay-bg"></div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3094.7584014308054!2d-86.57169368419649!3d39.134728879534705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c679aaed8980b%3A0xdc751a812c61dae7!2sSummit%20Urology!5e0!3m2!1sen!2sus!4v1594587535555!5m2!1sen!2sus"
-                                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
                 <div class="details">
-                    <a href="https://goo.gl/maps/Yt8B6rQt3HrtZ1ZLA" target="_blank">
-                        <h4>Summit Urology<br><span class="req">Urologist</span></h4></a>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3094.758401430804!2d-86.57169368464265!3d39.134728879534734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c679aaed8980b%3A0xdc751a812c61dae7!2sSummit%20Urology!5e0!3m2!1sen!2sus!4v1594760639970!5m2!1sen!2sus"
+                            width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <h4>Summit Urology<br><span class="req">Urologist</span></h4></a>
                     <p>
                         <i class="fa fa-map-marker" aria-hidden="true"></i> Bloomington, IN<br>
                         <i class="fa fa-exclamation" style="color: #CC0000" aria-hidden="true"></i> &nbsp;&nbsp;Appointment required<br>
@@ -150,12 +148,12 @@
                 <div class="thumb-wrap relative">
                     <div class="thumb relative">
                         <div class="overlay overlay-bg"></div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.370913609003!2d-86.53633828419571!3d39.166287779530144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c66ddeeeaaaab%3A0xe0b638df5ca6b8f9!2sFletcher%20Sport%20And%20Family%20Health!5e0!3m2!1sen!2sus!4v1594588180880!5m2!1sen!2sus"
-                                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
-                <div class="details"><a href="https://goo.gl/maps/ZLPV13oi1pSWdiSu8" target="_blank">
-                        <h4>Fletcher Sport And Family Health<br><span class="req">Medical clinic</span></h4></a>
+                <div class="details">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3093.370912708741!2d-86.5363383!3d39.1662878!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c66ddeeeaaaab%3A0xe0b638df5ca6b8f9!2sFletcher%20Sport%20And%20Family%20Health!5e0!3m2!1sen!2sus!4v1594760488534!5m2!1sen!2sus"
+                            width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <h4>Fletcher Sport And Family Health<br><span class="req">Medical clinic</span></h4></a>
                     <p>
                         <i class="fa fa-map-marker" aria-hidden="true"></i> Bloomington, IN<br>
                         <i class="fa fa-exclamation" style="color: #CC0000" aria-hidden="true"></i> &nbsp;&nbsp;Appointment required<br>
@@ -165,16 +163,16 @@
                     </p>
                 </div>
             </div>
-            <div class="single-popular-carusel col-lg-6 col-md-7">
+            <div class="single-popular-carusel col-lg-6 col-md-6">
                 <div class="thumb-wrap relative">
                     <div class="thumb relative">
                         <div class="overlay overlay-bg"></div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.370913609003!2d-86.53633828419571!3d39.166287779530144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c66ddeeeaaaab%3A0xe0b638df5ca6b8f9!2sFletcher%20Sport%20And%20Family%20Health!5e0!3m2!1sen!2sus!4v1594588180880!5m2!1sen!2sus"
-                                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
-                <div class="details"><a href="https://goo.gl/maps/Ee5YKLbhYg1ZGJvb9" target="_blank">
-                        <h4>IU Health Bloomington Remote Specimen Collection<br><span class="req">Medical laboratory</span></h4></a>
+                <div class="details">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.618215256493!2d-86.55756008464186!3d39.16066437953094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c6713fe555555%3A0x11e27bd303459fd6!2sIU%20Health%20Bloomington%20Remote%20Specimen%20Collection!5e0!3m2!1sen!2sus!4v1594759945321!5m2!1sen!2sus"
+                            width="200" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <h4>IU Health Bloomington Remote Specimen Collection<br><span class="req">Medical laboratory</span></h4></a>
                     <p>
                         <i class="fa fa-map-marker" aria-hidden="true"></i> Bloomington, IN<br>
                         <i class="fa fa-exclamation" style="color: #CC0000" aria-hidden="true"></i> &nbsp;&nbsp;Appointment required<br>
@@ -185,7 +183,7 @@
                     </p>
                 </div>
             </div>
-            <a href="#" class="primary-btn text-uppercase mx-auto center">Load More Places</a>
+            <a href="#" class="primary-btn text-uppercase mx-auto center">Load More Test Center Locations</a>
         </div>
     </div>
 </section>
@@ -205,10 +203,10 @@
                 </p>
                 <div class="row details-content">
                     <div class="col single-detials">
-                    
+
                     </div>
                     <div class="col single-detials">
-                    
+
                     </div>
                 </div>
             </div>
