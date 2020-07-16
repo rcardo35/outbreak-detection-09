@@ -5,8 +5,7 @@
                 <ul>
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                 </ul>
             </div>
             <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
@@ -25,11 +24,9 @@
             <ul class="nav-menu">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="campus-COVID-cases.php">Campus Tracing</a></li>
-                <li class="menu-has-children"><a href="resources.php">Resources</a>
-                    <ul>
-                    </ul>
-                </li>
+                <li class="menu-has-children"><a href="resources.php">Resources</a></li>
                 <li><a href="health-center-login.php">Health Center Staff Login</a></li>
+                <li><a href="self-reporting.php">Self-Report Page</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
