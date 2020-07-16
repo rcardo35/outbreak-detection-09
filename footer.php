@@ -2,18 +2,7 @@
 <footer class="footer-area section-gap">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h4></h4>
-                    <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h4>TechPoint University</h4>
                     <ul>
@@ -24,7 +13,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h4>Our Facilities</h4>
                     <ul>
@@ -35,7 +24,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h4>Connect with us</h4>
                     <ul>
@@ -45,7 +34,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h4>Resources</h4>
                     <ul>
