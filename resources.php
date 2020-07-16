@@ -84,7 +84,9 @@
                         <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html" target="_blank"><h3 class="mt-20 mb-20">Guidance for Reopening Campus
                                 Operations</h3></a>
                         <p>
-                            As some institutions of higher education (IHE) open in the United States, the Centers for Disease Control and Prevention (CDC) offers the following considerations for ways in which IHEs can help protect students and employees (e.g., faculty, staff, and administrators) and slow the spread of the Coronavirus Disease 2019 (COVID-19). IHEs vary considerably in geographic location, size, and structure. As such, IHE officials can determine... <br>
+                            As some institutions of higher education (IHE) open in the United States, the Centers for Disease Control and Prevention (CDC) offers the following considerations for ways
+                            in which IHEs can help protect students and employees (e.g., faculty, staff, and administrators) and slow the spread of the Coronavirus Disease 2019 (COVID-19). IHEs vary
+                            considerably in geographic location, size, and structure. As such, IHE officials can determine... <br>
                             <span style="float:right;"><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/schools.html" target="_blank">Learn more! <i
                                             class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                         </p>
@@ -139,7 +141,10 @@
                         <a href="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/managing-stress-anxiety.html" target="_blank">
                             <h3 class="mt-20 mb-20">Mental Health and Coping During Covid</h3></a>
                         <p>
-                            The coronavirus disease 2019 (COVID-19) pandemic may be stressful for people. Fear and anxiety about a new disease and what could happen can be overwhelming and cause strong emotions in adults and children. Public health actions, such as social distancing, can make people feel isolated and lonely and can increase stress and anxiety. However, these actions are necessary to reduce the spread of COVID-19. <strong style="color: black"> Coping with stress in a healthy way will make you, the people you care about, and your community stronger. </strong><br>
+                            The coronavirus disease 2019 (COVID-19) pandemic may be stressful for people. Fear and anxiety about a new disease and what could happen can be overwhelming and cause
+                            strong emotions in adults and children. Public health actions, such as social distancing, can make people feel isolated and lonely and can increase stress and anxiety.
+                            However, these actions are necessary to reduce the spread of COVID-19. <strong style="color: black"> Coping with stress in a healthy way will make you, the people you care
+                                about, and your community stronger. </strong><br>
                             <span style="float:right;"><a href="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/managing-stress-anxiety.html" target="_blank">Learn more! <i
                                             class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
                         </p>
@@ -161,6 +166,13 @@
                         <div class="popular-post-list">
                             <div class="single-post-list d-flex flex-row align-items-center">
                                 <div class="details">
+                                    <a href="self-reporting.php" target="_blank"><h4>Report your symptoms to the University! &ensp;&ensp;&ensp;&ensp;</h4>
+                                        <p style="float: right">Updated 02 Hours ago</p></a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="single-post-list d-flex flex-row align-items-center">
+                                <div class="details">
                                     <a href="testing-centers.php" target="_blank"><h4>Find test centers near campus &ensp;&ensp;&ensp;&ensp;</h4>
                                         <p style="float: right">Updated 02 Hours ago</p></a>
                                 </div>
@@ -175,8 +187,9 @@
                             <hr>
                             <div class="single-post-list d-flex flex-row align-items-center">
                                 <div class="details">
-                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" target="_blank"><h4>Check your Symptoms! <br><span style="font-size: small; color: gray">CDC Self-Checker Page</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</h4>
-                                        <p style="float: right">Updated 20 days ago</p></a>
+                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" target="_blank"><h4>Check your Symptoms! <br><span style="font-size: small; color: gray" >CDC Self-Checker Page</span><br>
+                                        </h4>
+                                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<p style="float: right">Updated 20 days ago</p></a>
                                 </div>
                             </div>
                         </div>
