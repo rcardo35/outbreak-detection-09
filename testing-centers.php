@@ -226,6 +226,7 @@
 <?php
     require_once("footer.php");
 ?>
+
 <!-- End footer Area -->
 
 

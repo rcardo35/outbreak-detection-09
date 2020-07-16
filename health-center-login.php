@@ -330,6 +330,7 @@
 ?>
 <!-- End footer Area -->
 
+
 <!--Edit Modal-->
 <div class="modal fade" id="editData" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
