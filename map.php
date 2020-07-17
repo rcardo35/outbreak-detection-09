@@ -23,15 +23,6 @@
 <div id="map"></div>
 
 <script>
-	var customLabel = {
-		campus: {
-			label: 'C'
-		},
-		bar: {
-			label: 'B'
-		}
-	};
-	
 	function initMap() {
 		var map = new google.maps.Map(document.getElementById('map'), {
 			center: new google.maps.LatLng(39.175470, -86.512421),
@@ -40,14 +31,13 @@
 		var infoWindow = new google.maps.InfoWindow;
 		
 		// Change this depending on the name of your PHP or XML file
-		downloadUrl('create-xml.php', function(data) {
+		downloadUrl('create-map-xml.php', function(data) {
 			var xml = data.responseXML;
 			var markers = xml.documentElement.getElementsByTagName('marker');
 			Array.prototype.forEach.call(markers, function(markerElem) {
 				var id = markerElem.getAttribute('id');
 				var name = markerElem.getAttribute('name');
 				var address = markerElem.getAttribute('address');
-				var type = markerElem.getAttribute('type');
 				var point = new google.maps.LatLng(
 						parseFloat(markerElem.getAttribute('lat')),
 						parseFloat(markerElem.getAttribute('lng')));
@@ -61,11 +51,11 @@
 				var text = document.createElement('text');
 				text.textContent = address
 				infowincontent.appendChild(text);
-				var icon = customLabel[type] || {};
+				var icon = markerElem.getAttribute('count');
 				var marker = new google.maps.Marker({
 					map: map,
 					position: point,
-					label: icon.label
+					label: icon
 				});
 				marker.addListener('click', function() {
 					infoWindow.setContent(infowincontent);

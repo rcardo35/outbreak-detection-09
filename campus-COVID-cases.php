@@ -44,36 +44,48 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <style>
-        .form-wrapper {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            min-height: 100%;
-            padding: 20px;
+        iframe {
+            border: none;
+            width: 120%;
+            height: 400px;
+        }
+
+        @media (min-width: 1024px) {
+            .content_viewport {
+                border: 0px none;
+                height: 900px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .content_viewport {
+                border: 0px none;
+                height: 900px;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .content_viewport {
+                border: 0px none;
+                height: 900px;
+                width: 100%;
+            }
         }
 
         .req {
-            color: #C00;
-            font-size: 12px;
+            color: #0c5460;
+            font-size: 14px;
         }
 
         .center {
             text-align: center;
         }
 
-        .covid-area {
-            margin-top: 40px;
-            margin-bottom: 500px;
-        }
-
-        .map {
-            height: 100%;
-        }
     </style>
-</head>
 
+</head>
 <body>
 <header id="header" id="home">
     <?php require_once "navbar.php"; ?>
@@ -97,78 +109,30 @@
 
 
 <!-- start campus-page Area -->
-<section class="covid-area">
-    <div id="map"></div>
-    <script>
-		var customLabel = {
-			restaurant: {
-				label: 'R'
-			}, bar: {
-				label: 'B'
-			}
-		};
-		
-		function initMap() {
-			var map = new google.maps.Map(document.getElementById('map'), {
-				center: new google.maps.LatLng(39.174740, -86.513806), zoom: 12
-			});
-			var infoWindow = new google.maps.InfoWindow;
-			
-			// Change this depending on the name of your PHP or XML file
-			downloadUrl('create-xml.php', function (data) {
-				var xml = data.responseXML;
-				var markers = xml.documentElement.getElementsByTagName('markers');
-				Array.prototype.forEach.call(markers, function (markerElem) {
-					var id = markerElem.getAttribute('id');
-					var name = markerElem.getAttribute('name');
-					var address = markerElem.getAttribute('address');
-					var type = markerElem.getAttribute('type');
-					var point = new google.maps.LatLng(parseFloat(markerElem.getAttribute('lat')), parseFloat(markerElem.getAttribute('lng')));
-					
-					var infowincontent = document.createElement('div');
-					var strong = document.createElement('strong');
-					strong.textContent = name
-					infowincontent.appendChild(strong);
-					infowincontent.appendChild(document.createElement('br'));
-					
-					var text = document.createElement('text');
-					text.textContent = address
-					infowincontent.appendChild(text);
-					var icon = customLabel[type] || {};
-					var marker = new google.maps.Marker({
-						map: map, position: point, label: icon.label
-					});
-					marker.addListener('click', function () {
-						infoWindow.setContent(infowincontent);
-						infoWindow.open(map, marker);
-					});
-				});
-			});
-		}
-		
-		
-		function downloadUrl(url, callback) {
-			var request = window.ActiveXObject ? new ActiveXObject('Microsoft.XMLHTTP') : new XMLHttpRequest;
-			
-			request.onreadystatechange = function () {
-				if(request.readyState == 4) {
-					request.onreadystatechange = doNothing;
-					callback(request, request.status);
-				}
-			};
-			
-			request.open('GET', url, true);
-			request.send(null);
-		}
-		
-		function doNothing() {
-		}
-    </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBENGN2akXMeKnda6n-g0KA-HnHsWw540=initMap">
-    </script>
+<section class="popular-courses-area section-gap courses-page">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">Testing Centers near campus</h1>
+                    <p>Find the nearest testing centers below:</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="single-popular-carusel col-lg-6 col-md-7">
+                <div class="thumb-wrap relative">
+                    <div class="thumb relative">
+                        <div class="overlay overlay-bg"></div>
+                    </div>
+                </div>
+                <div class="details">
+                    <iframe src="map.php"
+                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
 <!-- End campus-page Area -->
 
