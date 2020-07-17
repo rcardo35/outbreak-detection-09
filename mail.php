@@ -1,31 +1,34 @@
 <?php
-//    $to = 'demo@site.com';
-//    $name = $_POST["name"];
-//    $email= $_POST["email"];
-//    $text= $_POST["message"];
-//    $subject= $_POST["subject"];
-//
-//
-//
-//    $headers = 'MIME-Version: 1.0' . "\r\n";
-//    $headers .= "From: " . $email . "\r\n"; // Sender's E-mail
-//    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-//
-//    $message ='<table style="width:100%">
-//        <tr>
-//            <td>'.$name.'  '.$subject.'</td>
-//        </tr>
-//        <tr><td>Email: '.$email.'</td></tr>
-//        <tr><td>phone: '.$subject.'</td></tr>
-//        <tr><td>Text: '.$text.'</td></tr>
-//
-//    </table>';
-//
-//    if (@mail($to, $email, $message, $headers))
-//    {
-//        echo 'Your message has been sent.';
-//    }else{
-//        echo 'failed';
-//    }
-//
-//?>
+//    require 'vendor/autoload.php'; // If you're using Composer (recommended)
+// Comment out the above line if not using Composer
+    require("sendgrid-php/sendgrid-php.php");
+// If not using Composer, uncomment the above line and
+// download sendgrid-php.zip from the latest release here,
+// replacing <PATH TO> with the path to the sendgrid-php.php file,
+// which is included in the download:
+// https://github.com/sendgrid/sendgrid-php/releases
+    
+    
+    if (isset($_POST)) {
+        
+        $to = filter_var($_POST['demo-email'], FILTER_SANITIZE_EMAIL);
+        $building = filter_var($_POST['building'], FILTER_SANITIZE_STRING);
+        
+        $email = new \SendGrid\Mail\Mail();
+        $email->setFrom("covidalert@techpointuniversity.edu", "TechPoint University Alert System");
+        $email->setSubject("COVID-19 Alert");
+        $email->addTo($to, "University Member");
+        $email->addContent("text/html", "<strong>Univeristy Alert:</strong>
+            <p>A University team member who was in the <b>$building</b> building within the last two weeks has been confirmed with COVID-19 and is under medical supervision off-campus. Until further notice no one is permitted to enter the <b>$building</b> while the University employs professional sanitation and protocols for restoring the area for entry and use.</p>
+            <p>This is an automated notification, please do not reply to this email. If you have any questions please contact: <mailto>healthcenter@techpointuniversity.edu directly.</mailto></p>"
+        );
+        $sendgrid = new \SendGrid('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');
+        try {
+            $response = $sendgrid->send($email);
+            print $response->statusCode() . "\n";
+            print_r($response->headers());
+            print $response->body() . "\n";
+        } catch (Exception $e) {
+            echo 'Caught exception: ' . $e->getMessage() . "\n";
+        }
+    }
