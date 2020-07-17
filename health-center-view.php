@@ -2,7 +2,8 @@
     require_once("config/database_config.php");
     require_once("controller/database_queries.php");
     
-    if(!$_POST['username'] == 'admin' && !$_POST['admin'] == 'admin'){
+    if (($_POST['username'] == "admin" && $_POST['password'] == "admin") || ($_GET['noaccess'] == 'false')) {
+    } else {
         header("Location: health-center-login.php?noaccess=true");
     }
 ?>
@@ -40,15 +41,15 @@
 
     <link rel="stylesheet" href="assets/css/datablecss.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+
     <!-- Datatable -->
-<!--    <link rel="stylesheet" href="assets/css/datablecss.css">-->
+    <!--    <link rel="stylesheet" href="assets/css/datablecss.css">-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
-    
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <script type="text/javascript">
 		function openCity(evt, cityName) {
 			
@@ -66,10 +67,17 @@
 		}
 		
 		$(document).ready(function () {
-			$('#example').DataTable();
-			$('#FacultyTable').DataTable();
-			$('#StaffTable').DataTable();
+			$('#example').DataTable({
+				scrollX: true,
+			});
+			$('#FacultyTable').DataTable({
+				scrollX: true,
+			});
+			$('#StaffTable').DataTable({
+				scrollX: true,
+			});
 			document.getElementById('students').click();
+			// $('.collapse').collapse()
 		});
     </script>
 
@@ -122,8 +130,8 @@
         .center {
             text-align-last: center;
         }
-        
-        .modal-header{
+
+        .modal-header {
             text-align-last: left !important;
         }
 
@@ -131,6 +139,7 @@
             max-height: calc(100vh - 210px);
             overflow-y: auto;
         }
+
         .req {
             color: #C00;
             font-size: 12px;
@@ -175,13 +184,13 @@
             <p style="font-size: 18px">This table contains student cases being reported and traced. </p>
             <br>
 
-            <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <table id="example" class="table table-striped table-bordered display nowrap" style="width:100%">
                 <thead>
                 <tr>
                     <th>Case ID</th>
-                    <th>Name</th>
+                    <th>Name &emsp;&emsp;&emsp;&emsp;</th>
                     <th>Phone Number</th>
-                    <th>Email</th>
+                    <th>Email&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
                     <th>Campus Housing</th>
                     <th>Campus Places</th>
                     <th>Symptomatic</th>
@@ -225,20 +234,6 @@
                         </tr>
                     <?php } ?>
                 </tbody>
-                <tfoot>
-                <tr>
-                    <th>Case ID</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Campus Housing</th>
-                    <th>Campus Places</th>
-                    <th>Symptomatic</th>
-                    <th>Medically Confirmed</th>
-                    <th>Confirmed Date</th>
-                    <th>Edit</th>
-                </tr>
-                </tfoot>
             </table>
         </div>
 
@@ -276,20 +271,6 @@
                     <td></td>
                 </tr>
                 </tbody>
-                <tfoot>
-                <tr>
-                    <th>Case ID</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Department</th>
-                    <th>Campus Places</th>
-                    <th>Symptomatic</th>
-                    <th>Medically Confirmed</th>
-                    <th>Confirmed Date</th>
-                    <th>Edit</th>
-                </tr>
-                </tfoot>
             </table>
         </div>
 
@@ -328,20 +309,50 @@
                 </tr>
                 </tbody>
                 <tfoot>
-                <tr>
-                    <th>Case ID</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Department</th>
-                    <th>Campus Places</th>
-                    <th>Symptomatic</th>
-                    <th>Medically Confirmed</th>
-                    <th>Confirmed Date</th>
-                    <th>Edit</th>
-                </tr>
                 </tfoot>
             </table>
+        </div>
+
+        <br><br>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Test Alert Sample Demo
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <p><b>For demo purposes, please enter a valid email address to send an alert:</b></p><br>
+                        <form id="myForm" action="mail.php" method="post">
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="demo-email">Email: <span class="req">  *</span> </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" name="demo-email" id="demo-email" placeholder="Valid Email Required" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="building">Please select enter the building you would like to send in the alert: <span class="req">  *</span> </label>
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" name="building" id="building" placeholder="Building Name" required>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div style="float: right">
+                            <button class="genric-btn primary" style="background-color: #007bff; border-color: #007bff;" id="submit">Send Alert</button>
+                        </div>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -361,7 +372,9 @@
             <form action="#" method="post" id="updateForm">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Update Entry</h4>
-                    <button type="button" class="close req" data-dismiss="modal" aria-label="Close"><spanaria-hidden="true">&times;</span></button>
+                    <button type="button" class="close req" data-dismiss="modal" aria-label="Close">
+                        <spanaria-hidden
+                        ="true">&times;</span></button>
                 </div>
                 <div class="modal-body" id="info_update">
                 </div>
@@ -417,10 +430,7 @@
 	$(document).on('click', '.edit_data', function () {
 		var caseID = $(this).attr('id');
 		$.ajax({
-			url: "edit-case.php",
-			type: "post",
-			data: {caseID: caseID},
-			success: function (data) {
+			url: "edit-case.php", type: "post", data: {caseID: caseID}, success: function (data) {
 				$("#info_update").html(data);
 				$("#editData").modal('show');
 			}
@@ -430,7 +440,7 @@
 	$(document).on('click', '#update', function () {
 		var caseID = $(this).attr('id');
 		var symptoms = [];
-  
+		
 		$('#updateForm input:checkbox[name=symptoms]').each(function () {
 			
 			if($(this).is(":checked")) {
@@ -448,8 +458,8 @@
 			}
 		});
 	});
-	
- 
+
+
 </script>
 </body>
 </html>
