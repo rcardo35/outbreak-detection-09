@@ -41,10 +41,12 @@
         <div class="row fullscreen d-flex align-items-center justify-content-between">
             <div class="banner-content col-lg-9 col-md-12">
                 <h1 class="text-uppercase">
-                    Help us create a safer campus!
+                    Help us create a safer campus! <br><br>
                 </h1>
                 <p style="color: #FFFFFF; font-size: 24px">
-                    By self-reporting if you have been sick, you can help us track COVID-19 cases in our campus...
+                    By self-reporting if you have been sick, you can help us <br><br>
+                    track COVID-19 cases in our campus...
+                    <br><br>
                 </p>
                 <a href="self-reporting.php" class="primary-btn text-uppercase">Take me to the self-report page</a>
             </div>
