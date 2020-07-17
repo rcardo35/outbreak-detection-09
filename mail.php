@@ -22,7 +22,7 @@
             <p>A University team member who was in the <b>$building</b> building within the last two weeks has been confirmed with COVID-19 and is under medical supervision off-campus. Until further notice no one is permitted to enter the <b>$building</b> while the University employs professional sanitation and protocols for restoring the area for entry and use.</p>
             <p>This is an automated notification, please do not reply to this email. If you have any questions please contact: <mailto>healthcenter@techpointuniversity.edu directly.</mailto></p>"
         );
-        $sendgrid = new \SendGrid('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');
+        $sendgrid = new \SendGrid(getenv('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'));
         try {
             $response = $sendgrid->send($email);
             print $response->statusCode() . "\n";
