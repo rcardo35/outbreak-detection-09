@@ -47,12 +47,16 @@
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = 'Here is the subject';
-        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $mail->Body    = '<p><b>Univeristy Alert:</b></p>
+                          <p>A University team member who was in Library within the last two weeks has been confirmed with COVID-19 and is under medical supervision off-campus. Until further notice no one is permitted to enter Library while the University employs professional sanitation and protocols for restoring the area for entry and use.</p>
+                          <p>This is an automated notification, please do not reply to this email. If you have any questions please contact: healthcenter@techpointuniversity.edu directly.
+
+</p>';
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     
         $mail->send();
         echo 'Message has been sent';
-        header('Location: index.php');
+//        header('Location: index.php');
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
