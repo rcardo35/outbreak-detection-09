@@ -46,8 +46,10 @@
     <style>
         iframe {
             border: none;
-            width: 120%;
-            height: 400px;
+            width: 125%;
+            height: 500px;
+            position: relative;
+            left: -120px;
         }
 
         @media (min-width: 1024px) {
@@ -114,8 +116,8 @@
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">Testing Centers near campus</h1>
-                    <p>Find the nearest testing centers below:</p>
+                    <h1 class="mb-10">Campus COVID Cases</h1>
+                    <p>Keep yourself updated about all confirmed COVID cases</p>
                 </div>
             </div>
         </div>
