@@ -8,8 +8,6 @@
 // which is included in the download:
 // https://github.com/sendgrid/sendgrid-php/releases
     
-    
-    if (isset($_POST)) {
         
         $to = filter_var($_POST['demo-email'], FILTER_SANITIZE_EMAIL);
         $building = filter_var($_POST['building'], FILTER_SANITIZE_STRING);
@@ -31,4 +29,3 @@
         } catch (Exception $e) {
             echo 'Caught exception: ' . $e->getMessage() . "\n";
         }
-    }
