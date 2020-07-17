@@ -58,41 +58,50 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="single-feature" onclick="location.href='self-reporting.php';">
+                <div class="single-feature" onclick="location.href='map.php';">
                     <div class="title">
-                        <h4>Employee/Staff Self-Reporting</h4>
+                        <h4>Campus COVID Cases</h4>
                     </div>
                     <div class="desc-wrap">
                         <p>
-                            If you are an employee/staff member, please use this page to self-report
+                            <br>
+                            Keep yourself updated about COVID cases in your campus
+                            <br>
+                            <br>
+                        </p>
+                    <a href="map.php">Click Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="single-feature" onclick="location.href='self-reporting.php';">
+                    <div class="title">
+                        <h4>Self-Reporting</h4>
+                    </div>
+                    <div class="desc-wrap">
+                        <p>
+                            <br>
+                            If you are a university student/employee,
+                            please use this page to self-report
+                            <br>
                         </p>
                         <a href="self-reporting.php">Click Here</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="single-feature" onclick="location.href='self-reporting.php';">
+                <div class="single-feature" onclick="location.href='testing-centers.php';">
                     <div class="title">
-                        <h4>Student Self-Reporting</h4>
+                        <h4>Testing Centers</h4>
                     </div>
                     <div class="desc-wrap">
                         <p>
-                            If you are a university student, please use this page to self-report
+                            <br>
+                            Find testing centers near you, if you are experiencing symptoms
+                            <br>
+                            <br>
                         </p>
-                        <a href="#">Click Here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-feature" onclick="location.href='campus-COVID-cases.php';">
-                    <div class="title">
-                        <h4>Campus COVID Cases</h4>
-                    </div>
-                    <div class="desc-wrap">
-                        <p>
-                            Keep yourself updated about COVID cases in your campus
-                        </p>
-                        <a href="#">Click Here</a>
+                        <a href="testing-centers.php">Click Here</a>
                     </div>
                 </div>
             </div>
