@@ -7,7 +7,7 @@
         $name          = $_POST['FullName'];
         $phone         = $_POST['PhoneNumber'];
         $email         = $_POST['UniversityEmail'];
-        $housing       = $_POST['CampusHousing'];
+//        $housing       = $_POST['CampusHousing'];
         $dorm          = $_POST['DormBuilding'];
         $campusPlaces  = $_POST['CampusPlaces'];
         $beenExposed   = $_POST['BeenExposed'];
@@ -18,7 +18,7 @@
         $medConfirmed  = $_POST['confirmed'];
         $confirmedDate = $_POST['confirmationDate'];
     
-        $insertQuery = "UPDATE heroku_c224005b36bf596.studentcases SET FullName = '$name', PhoneNumber = '$phone', UniversityEmail = '$email', CampusHousing = '$housing', DormBuilding ='$dorm', CampusPlaces = '$campusPlaces', BeenExposed ='$beenExposed', ExposureDescription = '$exposureDesc', Symptoms = '$symptoms', BeenMedicallyEvaluated = '$beenEvaluated', BeenMedicallyConfirmed = '$medConfirmed', ConfirmedDate = '$confirmedDate' WHERE CaseID = '$caseID'";
+        $insertQuery = "UPDATE heroku_c224005b36bf596.studentcases SET FullName = '$name', PhoneNumber = '$phone', UniversityEmail = '$email', CampusHousing = '', DormBuilding ='$dorm', CampusPlaces = '$campusPlaces', BeenExposed ='$beenExposed', ExposureDescription = '$exposureDesc', Symptoms = '$symptoms', BeenMedicallyEvaluated = '$beenEvaluated', BeenMedicallyConfirmed = '$medConfirmed', ConfirmedDate = '$confirmedDate' WHERE CaseID = '$caseID'";
     
         $insertResult = $conn->query($insertQuery);
         if ( ! $insertResult) {

@@ -17,7 +17,7 @@
             $exposureDesc  = $row['ExposureDescription'];
             $exposureDate  = $row['ExposureDate'];
             $symptoms      = $row['Symptoms'];
-            $beenEvaluated = $row['BeenMedicallyEvauated'];
+            $beenEvaluated = $row['BeenMedicallyEvaluated'];
             $medConfirmed  = $row['BeenMedicallyConfirmed'];
             $confirmedDate = $row['ConfirmedDate'];
         }
@@ -94,14 +94,14 @@
 
 <div class="form-group">
     <label>Has been medically Evaluated?:</label><br>
-    <label for="yes" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="Yes" onclick="showEval()"> Yes </label><br>
-    <label for="no" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="No" onclick="hideEval()"> No </label>
+    <label for="yes" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="Yes"> Yes </label><br>
+    <label for="no" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="No"> No </label>
 </div>
 
 <div class="form-group">
     <label>Has been medically confirmed?:</label><br>
-    <label for="yes" class="radio-inline"><input type="radio" name="confirmed" id="confirmed" value="Yes" onclick="showEval()"> Yes </label><br>
-    <label for="no" class="radio-inline"><input type="radio" name="confirmed" id="confirmed" value="No" onclick="hideEval()"> No </label>
+    <label for="yes" class="radio-inline"><input type="radio" name="confirmed" id="confirmed" value="Yes"> Yes </label><br>
+    <label for="no" class="radio-inline"><input type="radio" name="confirmed" id="confirmed" value="No"> No </label>
 </div>
 
 <div class="form-group">
