@@ -1,3 +1,7 @@
+<?php
+    require_once("config/database_config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 <head>
@@ -31,17 +35,18 @@
     <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- Fade In -->
+    <link rel="stylesheet" href="assets/css/datablecss.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Include in all files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+		$(document).ready(function () {
+			$('#example').DataTable({
+				scrollX: true,
+			});
+			
+		});
+    </script>
 
     <style>
         iframe {
@@ -100,9 +105,8 @@
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    Campus COVID Cases
+                    Campus COVID-19 Cases Map
                 </h1>
-                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="campus-COVID-cases.php">Campus COVID Cases</a></p>
             </div>
         </div>
     </div>
@@ -116,23 +120,48 @@
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">Campus COVID Cases</h1>
-                    <p>Keep yourself updated about all confirmed COVID cases</p>
+                    <h3 class="mb-10">Find the latest cases confirmed in campus by building: </h3>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="single-popular-carusel col-lg-6 col-md-7">
+            <div class="single-popular-carusel col-lg-6 col-md-8">
                 <div class="thumb-wrap relative">
                     <div class="thumb relative">
                         <div class="overlay overlay-bg"></div>
                     </div>
                 </div>
                 <div class="details">
-                    <iframe src="map.php"
-                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="map.php" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
+            <br>
+            <br>
+            <div class="single-popular-carusel col-lg-6 col-md-7" style="padding-left: 25px">
+                <table id="example" class="table table-striped table-bordered display nowrap" style="width:100%;">
+                    <thead>
+                    <tr>
+                        <th>Campus Building</th>
+                        <th>Confirmed Case Date:</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        $stmt = $conn->query("SELECT CampusPlaces, ConfirmedDate FROM heroku_c224005b36bf596.studentcases WHERE BeenMedicallyConfirmed = 'Yes'")->fetchAll(PDO::FETCH_ASSOC);
+                        
+                        foreach ($stmt as $row) {
+                            $name = $row['CampusPlaces'];
+                            $date = $row['ConfirmedDate'];
+                            ?>
+                            <tr>
+                                <td> <?= $name ?> </td>
+                                <td> <?= $date ?></td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 </section>
@@ -158,6 +187,9 @@
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
 
 </body>
 </html>
