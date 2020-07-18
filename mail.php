@@ -37,7 +37,7 @@
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = 'COVID-19 ALERT';
         $mail->Body    = "<p><b>University Alert:</b></p>
-                          <p>A University team member who was in the {$building} building within the last two weeks has been confirmed with COVID-19 and is under medical supervision off-campus. Until further notice no one is permitted to enter the {$building} building while the University employs professional sanitation and protocols for restoring the area for entry and use.</p>
+                          <p>A University team member who was in the <b>{$building}</b> within the last two weeks has been confirmed with COVID-19 and is under medical supervision off-campus. Until further notice no one is permitted to enter the <b>{$building}</b> while the University employs professional sanitation and protocols for restoring the area for entry and use.</p>
                           <p>This is an automated notification, please do not reply to this email.<br> If you have any questions please contact: healthcenter@techpointuniversity.edu directly.
 
 </p>";

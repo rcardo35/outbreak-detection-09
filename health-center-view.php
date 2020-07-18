@@ -326,7 +326,7 @@
 
                 <div id="collapseOne" class="collapse in" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                        <p><b>For demo purposes, please enter a valid email address to send an alert:</b></p><br>
+                        <p><b>For demo purposes, please enter a valid email address that will receive the alert</b></p><br>
                         <form id="myForm" action="mail.php" method="post">
                         <div class="form-group row">
                             <div class="col-sm-6">
