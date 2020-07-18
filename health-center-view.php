@@ -2,6 +2,7 @@
     require_once("config/database_config.php");
     require_once("controller/database_queries.php");
     
+
     if (($_POST['username'] == "admin" && $_POST['password'] == "admin") || ($_GET['noaccess'] == 'false')) {
     } else {
         header("Location: health-center-login.php?noaccess=true");
@@ -41,7 +42,8 @@
 
     <link rel="stylesheet" href="assets/css/datablecss.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Datatable -->
     <!--    <link rel="stylesheet" href="assets/css/datablecss.css">-->
@@ -144,6 +146,14 @@
             color: #C00;
             font-size: 12px;
         }
+
+        .table-header {
+            position: relative;
+        }
+
+        .table-body {
+            overflow: auto;
+        }
     </style>
 </head>
 <body>
@@ -157,10 +167,8 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
-                <!--                <h1 class="text-white">-->
-                <!--                    Self-Reporting-->
-                <!--                </h1>-->
-                <!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>-->
+                <h1 class="text-white">
+                    Health Center
             </div>
         </div>
     </div>
@@ -169,6 +177,7 @@
 
 <!-- Start contact-page Area -->
 <section class="contact-page-area section-gap">
+
     <div class="container" style="width: 140%">
         <h1 class="center mb-10" style="color:#222 ">Campus Tracing Tables</h1>
         <br>
@@ -184,28 +193,27 @@
             <p style="font-size: 18px">This table contains student cases being reported and traced. </p>
             <br>
 
-            <table id="example" class="table table-striped table-bordered display nowrap" style="width:100%">
+
+            <table id="example" class="table table-striped table-bordered display text-nowrap" style="width:100%">
                 <thead>
                 <tr>
                     <th>Case ID</th>
-                    <th>Name &emsp;&emsp;&emsp;&emsp;</th>
+                    <th>Full Student Name</th>
                     <th>Phone Number</th>
-                    <th>Email&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
-                    <th>Campus Housing</th>
-                    <th>Campus Places</th>
-                    <th>Symptomatic</th>
+                    <th>University Email Address</th>
+                    <th>Campus Housing Living?</th>
+                    <th>Campus Places Visited</th>
+                    <th> Current Symptoms Present &ensp;</th>
                     <th>Medically Confirmed</th>
                     <th>Confirmed Date</th>
-                    <th>Edit</th>
+                    <th>Edit Student Info</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
                     
                     $stmt = $conn->query("SELECT * FROM heroku_c224005b36bf596.studentcases")->fetchAll(PDO::FETCH_ASSOC);
-                    foreach ($stmt
-                    
-                             as $row) {
+                    foreach ($stmt as $row) {
                         
                         $caseID        = $row['CaseID'];
                         $name          = $row['FullName'];
@@ -228,7 +236,7 @@
                             <td> <?= $symptoms ?></td>
                             <td> <?= $medConfirmed ?></td>
                             <td> <?= $confirmedDate ?></td>
-                            <td>
+                            <td class="center">
                                 <button type="button" class="btn btn-info edit_data" id="<?php echo $row['CaseID']; ?>"><i class="fa fa-edit"></i><br</button>
                             </td>
                         </tr>
