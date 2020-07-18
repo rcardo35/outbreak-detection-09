@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>Education</title>
-    
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--
     CSS
@@ -33,11 +33,11 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    
+
 
     <link rel="stylesheet" href="assets/css/datablecss.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <script type="text/javascript">
 		function openCity(evt, cityName) {
 			
@@ -58,13 +58,12 @@
 			$('#example').DataTable({
 				rowReorder: {
 					selector: 'td:nth-child(2)'
-				},
-				responsive: true
+				}, responsive: true
 			});
 			document.getElementById('students').click();
 		});
     </script>
-    
+
     <style>
         /* STRUCTURE */
         .wrapper {
@@ -86,8 +85,8 @@
             max-width: 450px;
             position: relative;
             padding: 0px;
-            -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-            box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+            -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
@@ -102,7 +101,7 @@
 
         /* FORM TYPOGRAPHY*/
 
-        input[type=button], input[type=submit], input[type=reset]  {
+        input[type=button], input[type=submit], input[type=reset] {
             background-color: #56baed;
             border: none;
             color: white;
@@ -112,8 +111,8 @@
             display: inline-block;
             text-transform: uppercase;
             font-size: 13px;
-            -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-            box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+            -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+            box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
             -webkit-border-radius: 5px 5px 5px 5px;
             border-radius: 5px 5px 5px 5px;
             margin: 5px 20px 40px 20px;
@@ -124,11 +123,11 @@
             transition: all 0.3s ease-in-out;
         }
 
-        input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+        input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
             background-color: #39ace7;
         }
 
-        input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+        input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
             -moz-transform: scale(0.95);
             -webkit-transform: scale(0.95);
             -o-transform: scale(0.95);
@@ -203,23 +202,46 @@
         }
 
         /* Simple CSS3 Fade-in Animation */
-        @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-        @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
         .fadeIn {
-            opacity:0;
-            -webkit-animation:fadeIn ease-in 1;
-            -moz-animation:fadeIn ease-in 1;
-            animation:fadeIn ease-in 1;
+            opacity: 0;
+            -webkit-animation: fadeIn ease-in 1;
+            -moz-animation: fadeIn ease-in 1;
+            animation: fadeIn ease-in 1;
 
-            -webkit-animation-fill-mode:forwards;
-            -moz-animation-fill-mode:forwards;
-            animation-fill-mode:forwards;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 
-            -webkit-animation-duration:1s;
-            -moz-animation-duration:1s;
-            animation-duration:1s;
+            -webkit-animation-duration: 1s;
+            -moz-animation-duration: 1s;
+            animation-duration: 1s;
         }
 
         .fadeIn.second {
@@ -256,14 +278,14 @@
             color: #0d0d0d;
         }
 
-        .underlineHover:hover:after{
+        .underlineHover:hover:after {
             width: 100%;
         }
 
         .center {
             text-align-last: center;
         }
-        
+
         .req {
             color: #C00;
             font-size: 16px;
@@ -281,10 +303,8 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
-                <!--                <h1 class="text-white">-->
-                <!--                    Self-Reporting-->
-                <!--                </h1>-->
-                <!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>-->
+                <h1 class="text-white">
+                    Healthcare Center Staff Login</h1>
             </div>
         </div>
     </div>
@@ -294,10 +314,9 @@
 <!-- Start contact-page Area -->
 <section class="contact-page-area section-gap" style="width: 100%">
     <div class="container" style="width: 100%">
-        <h1 class="center">Healthcare Center Staff Login</h1>
-        <br>
-        <h3 class="center req">Please note this page is for healthcare center administrators only. If you are a student and would like to see the cases in campus please click here: <a href="campus-tracing.php">Campus Tracing</a></h3>
-        
+        <h3 class="center req">Please note this page is for healthcare center administrators only. If you are a student and would like to see the cases in campus please click here: <a
+                    href="campus-tracing.php">Campus Tracing</a></h3>
+
         <br>
         <div class="wrapper fadeInDown">
             <div id="formContent">
@@ -320,7 +339,7 @@
 
             </div>
         </div>
-    
+
 </section>
 <!-- End contact-page Area -->
 
@@ -416,7 +435,9 @@
             <form action="#" method="post" id="updateForm">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Update Entry</h4>
-                    <button type="button" class="close req" data-dismiss="modal" aria-label="Close"><spanaria-hidden="true">&times;</span></button>
+                    <button type="button" class="close req" data-dismiss="modal" aria-label="Close">
+                        <spanaria-hidden
+                        ="true">&times;</span></button>
                 </div>
                 <div class="modal-body" id="info_update">
                 </div>

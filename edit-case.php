@@ -94,19 +94,27 @@
 
 <div class="form-group">
     <label>Has been medically Evaluated?:</label><br>
-    <label for="yes" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="Yes"> Yes </label><br>
-    <label for="no" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="No"> No </label>
+    <label for="yes" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="Yes" <?php if ($beenEvaluated == "Yes") {
+            echo "checked='checked'";
+        } ?>> Yes </label><br>
+    <label for="no" class="radio-inline"><input type="radio" name="evaluated" id="evaluated" value="No" <?php if ($beenEvaluated == "No") {
+            echo "checked='checked'";
+        } ?>> No </label>
 </div>
 
 <div class="form-group">
     <label>Has been medically confirmed?:</label><br>
-    <label for="yes" class="radio-inline"><input type="radio" name="confirmed" id="confirmed" value="Yes"> Yes </label><br>
-    <label for="no" class="radio-inline"><input type="radio" name="confirmed" id="confirmed" value="No"> No </label>
+    <label for="yes" class="radio-inline"><input type="radio" name="confirmed" id="confirmed" value="Yes" <?php if ($medConfirmed == "Yes") {
+            echo "checked='checked'";
+        } ?>> Yes </label><br>
+    <label for="no" class="radio-inline"><input type="radio" name="confirmed" id="confirmed" value="No" <?php if ($medConfirmed == "No") {
+            echo "checked='checked'";
+        } ?>> No </label>
 </div>
 
 <div class="form-group">
     <label>Confirmed Date: <span class="req">Leave blank if no confirmation yet</span> </label>
     <div class="input-group date">
-        <input type="text" class="form-control" name="confirmationDate" id="confirmationDate" placeholder="DD/MM/YYYY"/>
+        <input type="text" class="form-control" name="confirmationDate" id="confirmationDate" value="<?php echo $confirmedDate; ?>"/>
     </div>
 </div>
