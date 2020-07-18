@@ -2,10 +2,10 @@
     require_once("config/database_config.php");
     require_once("controller/database_queries.php");
     
-        $caseID        = $_POST['CaseID'];
-        $name          = $_POST['FullName'];
-        $phone         = $_POST['PhoneNumber'];
-        $email         = $_POST['UniversityEmail'];
+        $caseID = $_POST['CaseID'];
+        $name   = $_POST['FullName'];
+        $phone  = $_POST['PhoneNumber'];
+        $email  = $_POST['UniversityEmail'];
 //        $housing       = $_POST['CampusHousing'];
         $dorm          = $_POST['DormBuilding'];
         $campusPlaces  = $_POST['CampusPlaces'];
@@ -22,6 +22,6 @@
         $insertResult = $conn->query($insertQuery);
         if ( ! $insertResult) {
             print $this->dbconn->errorInfo();
-    
-        var_dump($_POST);
-    }
+
+//        var_dump($_POST);
+        }

@@ -321,8 +321,8 @@
                 <br><br>
                 <!-- Login Form -->
                 <form action="health-center-view.php" method="post">
-                    <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+                    <input type="text" id="username" class="fadeIn second" name="username" value="admin">
+                    <input type="password" id="password" class="fadeIn third" name="password" value="admin">
                     <input type="submit" class="fadeIn fourth" value="Log In">
                     <?php
                         if (isset($_GET['noaccess'])) {
