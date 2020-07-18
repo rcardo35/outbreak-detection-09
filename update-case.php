@@ -2,7 +2,6 @@
     require_once("config/database_config.php");
     require_once("controller/database_queries.php");
     
-    if(isset($_POST)){
         $caseID        = $_POST['CaseID'];
         $name          = $_POST['FullName'];
         $phone         = $_POST['PhoneNumber'];
@@ -23,5 +22,6 @@
         $insertResult = $conn->query($insertQuery);
         if ( ! $insertResult) {
             print $this->dbconn->errorInfo();
-        }
+    
+        var_dump($_POST);
     }

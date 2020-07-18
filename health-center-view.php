@@ -2,7 +2,6 @@
     require_once("config/database_config.php");
     require_once("controller/database_queries.php");
     
-
     if (($_POST['username'] == "admin" && $_POST['password'] == "admin") || ($_GET['noaccess'] == 'false')) {
     } else {
         header("Location: health-center-login.php?noaccess=true");
@@ -42,11 +41,12 @@
 
     <link rel="stylesheet" href="assets/css/datablecss.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Datatable -->
     <!--    <link rel="stylesheet" href="assets/css/datablecss.css">-->
+
+    <!--  This line -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 
 
@@ -72,14 +72,9 @@
 			$('#example').DataTable({
 				scrollX: true,
 			});
-			$('#FacultyTable').DataTable({
-				scrollX: true,
-			});
-			$('#StaffTable').DataTable({
-				scrollX: true,
-			});
+			$('#FacultyTable').DataTable();
+			$('#StaffTable').DataTable();
 			document.getElementById('students').click();
-			// $('.collapse').collapse()
 		});
     </script>
 
@@ -146,14 +141,6 @@
             color: #C00;
             font-size: 12px;
         }
-
-        .table-header {
-            position: relative;
-        }
-
-        .table-body {
-            overflow: auto;
-        }
     </style>
 </head>
 <body>
@@ -168,7 +155,7 @@
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    Health Center
+                    Health Center </h1>
             </div>
         </div>
     </div>
@@ -177,7 +164,6 @@
 
 <!-- Start contact-page Area -->
 <section class="contact-page-area section-gap">
-
     <div class="container" style="width: 140%">
         <h1 class="center mb-10" style="color:#222 ">Campus Tracing Tables</h1>
         <br>
@@ -192,7 +178,6 @@
             <h2><b style="color:darkslategray;">Student Cases</b></h2>
             <p style="font-size: 18px">This table contains student cases being reported and traced. </p>
             <br>
-
 
             <table id="example" class="table table-striped table-bordered display text-nowrap" style="width:100%">
                 <thead>
@@ -279,6 +264,20 @@
                     <td></td>
                 </tr>
                 </tbody>
+                <tfoot>
+                <tr>
+                    <th>Case ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Campus Places</th>
+                    <th>Symptomatic</th>
+                    <th>Medically Confirmed</th>
+                    <th>Confirmed Date</th>
+                    <th>Edit</th>
+                </tr>
+                </tfoot>
             </table>
         </div>
 
@@ -317,61 +316,109 @@
                 </tr>
                 </tbody>
                 <tfoot>
+                <tr>
+                    <th>Case ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Campus Places</th>
+                    <th>Symptomatic</th>
+                    <th>Medically Confirmed</th>
+                    <th>Confirmed Date</th>
+                    <th>Edit</th>
+                </tr>
                 </tfoot>
             </table>
-        </div>
-
-        <br><br>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            Test Alert Sample Demo
-                        </button>
-                    </h5>
-                </div>
-
-                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                        <p><b>For demo purposes, please enter a valid email address that will receive the alert</b></p><br>
-                        <form id="myForm" action="mail.php" method="post">
-                        <div class="form-group row">
-                            <div class="col-sm-6">
-                                <label for="demo-email">Email: <span class="req">  *</span> </label>
-                            </div>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" name="demo-email" id="demo-email" placeholder="Valid Email Required" required>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group row">
-                            <div class="col-sm-6">
-                                <label for="building">Please select enter the building you would like to send in the alert: <span class="req">  *</span> </label>
-                            </div>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" name="building" id="building" placeholder="Building Name" required>
-                            </div>
-                        </div>
-                        <br><br>
-                        <div style="float: right">
-                            <button class="genric-btn primary" style="background-color: #007bff; border-color: #007bff;" id="submit">Send Alert</button>
-                        </div>
-                        <br><br>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
 <!-- End contact-page Area -->
 
 <!-- start footer Area -->
-<?php
-    require_once("footer.php");
-?>
+<footer class="footer-area section-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h4>Top Products</h4>
+                    <ul>
+                        <li><a href="#">Managed Website</a></li>
+                        <li><a href="#">Manage Reputation</a></li>
+                        <li><a href="#">Power Tools</a></li>
+                        <li><a href="#">Marketing Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Experts</a></li>
+                        <li><a href="#">Agencies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4  col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Stay update with our latest</p>
+                    <div class="" id="mc_embed_signup">
+                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'Enter Email Address '" required="" type="email">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <span class="lnr lnr-arrow-right"></span>
+                                    </button>
+                                </div>
+                                <div class="info"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom row align-items-center justify-content-between">
+            <p class="footer-text m-0 col-lg-6 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <div class="col-lg-6 col-sm-12 footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
 <!-- End footer Area -->
-
 
 <!--Edit Modal-->
 <div class="modal fade" id="editData" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -380,9 +427,7 @@
             <form action="#" method="post" id="updateForm">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Update Entry</h4>
-                    <button type="button" class="close req" data-dismiss="modal" aria-label="Close">
-                        <spanaria-hidden
-                        ="true">&times;</span></button>
+                    <button type="button" class="close req" data-dismiss="modal" aria-label="Close"><spanaria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body" id="info_update">
                 </div>
@@ -419,22 +464,6 @@
 
 
 <script>
-	// $(document).ready(function(){
-	// 	function alignModal(){
-	// 		var modalDialog = $(this).find(".modal-dialog");
-	//
-	// 		// Applying the top margin on modal dialog to align it vertically center
-	// 		modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
-	// 	}
-	// 	// Align modal when it is displayed
-	// 	$(".modal").on("shown.bs.modal", alignModal);
-	//
-	// 	// Align modal when user resize the window
-	// 	$(window).on("resize", function(){
-	// 		$(".modal:visible").each(alignModal);
-	// 	});
-	// });
-	
 	$(document).on('click', '.edit_data', function () {
 		var caseID = $(this).attr('id');
 		$.ajax({
