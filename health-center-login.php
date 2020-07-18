@@ -296,7 +296,7 @@
     <div class="container" style="width: 100%">
         <h1 class="center">Healthcare Center Staff Login</h1>
         <br>
-        <h3 class="center req">Please note this page is for healthcare center administrators only. If you are a student and would like to see the cases in campus please click here: <a href="campus-tracing.php">Campus Tracing</a></h3>
+        <h3 class="center req">Please note this page is for healthcare center administrators only. If you are a student and would like to see the cases in campus please click here: <a href="campus-COVID-cases.php">Campus Tracing</a></h3>
         
         <br>
         <div class="wrapper fadeInDown">

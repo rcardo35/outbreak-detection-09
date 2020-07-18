@@ -88,7 +88,7 @@
                 <h1 class="text-white">
                     Campus COVID Cases
                 </h1>
-                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="campus-tracing.php">Campus COVID Cases</a></p>
+                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="campus-COVID-cases.php">Campus COVID Cases</a></p>
             </div>
         </div>
     </div>
