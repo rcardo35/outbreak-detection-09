@@ -19,18 +19,14 @@
 <div class="container main-menu">
     <div class="row align-items-center justify-content-between d-flex">
         <div id="logo">
-            <a href="index.php"><img src="assets/img/logo.png" alt="" title=""/></a>
+            <a href="index.php"><img src="assets/img/techlogo.png" alt="" title=""/></a>
         </div>
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="campus-tracing.php">Campus Tracing</a></li>
-                <li class="menu-has-children"><a href="">Resources</a>
-                    <ul>
-                        <li><a href="testing-centers.php">Testing Centers</a></li>
-                        <li><a href="symptoms-survey.php">Check your symptoms!</a></li>
-                    </ul>
-                </li>
+                <li><a href="resources.php">Resources</a></li>
+                <li><a href="self-reporting.php">Self-Report Page</a></li>
                 <li><a href="health-center-login.php">Health Center Staff Login</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
             </ul>
