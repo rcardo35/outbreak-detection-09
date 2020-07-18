@@ -2,7 +2,8 @@
     require_once("config/database_config.php");
     require_once("controller/database_queries.php");
     
-    if(!$_POST['username'] == 'admin' && !$_POST['admin'] == 'admin'){
+    if (($_POST['username'] == "admin" && $_POST['password'] == "admin") || ($_GET['noaccess'] == 'false')) {
+    } else {
         header("Location: health-center-login.php?noaccess=true");
     }
 ?>
@@ -44,6 +45,8 @@
 
     <!-- Datatable -->
     <!--    <link rel="stylesheet" href="assets/css/datablecss.css">-->
+
+    <!--  This line -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 
 
@@ -66,7 +69,9 @@
 		}
 		
 		$(document).ready(function () {
-			$('#example').DataTable();
+			$('#example').DataTable({
+				scrollX: true,
+			});
 			$('#FacultyTable').DataTable();
 			$('#StaffTable').DataTable();
 			document.getElementById('students').click();
@@ -123,7 +128,7 @@
             text-align-last: center;
         }
 
-        .modal-header{
+        .modal-header {
             text-align-last: left !important;
         }
 
@@ -131,6 +136,7 @@
             max-height: calc(100vh - 210px);
             overflow-y: auto;
         }
+
         .req {
             color: #C00;
             font-size: 12px;
@@ -148,10 +154,8 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
-                <!--                <h1 class="text-white">-->
-                <!--                    Self-Reporting-->
-                <!--                </h1>-->
-                <!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>-->
+                <h1 class="text-white">
+                    Health Center </h1>
             </div>
         </div>
     </div>
@@ -161,7 +165,7 @@
 <!-- Start contact-page Area -->
 <section class="contact-page-area section-gap">
     <div class="container" style="width: 140%">
-        <h1 class="center">Campus Tracing Tables</h1>
+        <h1 class="center mb-10" style="color:#222 ">Campus Tracing Tables</h1>
         <br>
         <div class="tab">
             <button class="tablinks" id="students" onclick="openCity(event, 'Student Table')">Student Table</button>
@@ -175,28 +179,26 @@
             <p style="font-size: 18px">This table contains student cases being reported and traced. </p>
             <br>
 
-            <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <table id="example" class="table table-striped table-bordered display text-nowrap" style="width:100%">
                 <thead>
                 <tr>
                     <th>Case ID</th>
-                    <th>Name</th>
+                    <th>Full Student Name</th>
                     <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Campus Housing</th>
-                    <th>Campus Places</th>
-                    <th>Symptomatic</th>
+                    <th>University Email Address</th>
+                    <th>Campus Housing Living?</th>
+                    <th>Campus Places Visited</th>
+                    <th> Current Symptoms Present &ensp;</th>
                     <th>Medically Confirmed</th>
                     <th>Confirmed Date</th>
-                    <th>Edit</th>
+                    <th>Edit Student Info</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
                     
                     $stmt = $conn->query("SELECT * FROM heroku_c224005b36bf596.studentcases")->fetchAll(PDO::FETCH_ASSOC);
-                    foreach ($stmt
-                    
-                             as $row) {
+                    foreach ($stmt as $row) {
                         
                         $caseID        = $row['CaseID'];
                         $name          = $row['FullName'];
@@ -219,26 +221,12 @@
                             <td> <?= $symptoms ?></td>
                             <td> <?= $medConfirmed ?></td>
                             <td> <?= $confirmedDate ?></td>
-                            <td>
+                            <td class="center">
                                 <button type="button" class="btn btn-info edit_data" id="<?php echo $row['CaseID']; ?>"><i class="fa fa-edit"></i><br</button>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
-                <tfoot>
-                <tr>
-                    <th>Case ID</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Campus Housing</th>
-                    <th>Campus Places</th>
-                    <th>Symptomatic</th>
-                    <th>Medically Confirmed</th>
-                    <th>Confirmed Date</th>
-                    <th>Edit</th>
-                </tr>
-                </tfoot>
             </table>
         </div>
 
@@ -476,29 +464,10 @@
 
 
 <script>
-	// $(document).ready(function(){
-	//  function alignModal(){
-	//      var modalDialog = $(this).find(".modal-dialog");
-	//
-	//      // Applying the top margin on modal dialog to align it vertically center
-	//      modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
-	//  }
-	//  // Align modal when it is displayed
-	//  $(".modal").on("shown.bs.modal", alignModal);
-	//
-	//  // Align modal when user resize the window
-	//  $(window).on("resize", function(){
-	//      $(".modal:visible").each(alignModal);
-	//  });
-	// });
-	
 	$(document).on('click', '.edit_data', function () {
 		var caseID = $(this).attr('id');
 		$.ajax({
-			url: "edit-case.php",
-			type: "post",
-			data: {caseID: caseID},
-			success: function (data) {
+			url: "edit-case.php", type: "post", data: {caseID: caseID}, success: function (data) {
 				$("#info_update").html(data);
 				$("#editData").modal('show');
 			}
