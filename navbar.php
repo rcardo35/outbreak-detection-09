@@ -24,7 +24,7 @@
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="campus-COVID-cases.php">Campus Tracing</a></li>
+                <li><a href="campus-tracing.php">Campus Tracing</a></li>
                 <li><a href="resources.php">Resources</a></li>
                 <li><a href="self-reporting.php">Self-Report Page</a></li>
                 <li><a href="health-center-login.php">Health Center Staff Login</a></li>
