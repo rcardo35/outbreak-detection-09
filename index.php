@@ -38,15 +38,16 @@
 <section class="banner-area relative" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
-        <div class="row fullscreen d-flex align-items-center justify-content-between">
-            <div class="banner-content col-lg-9 col-md-12">
-                <h1 class="text-uppercase">
-                    Help us create a safer campus!
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-uppercase text-white">
+                    Help us create a safer campus! <br><br>
                 </h1>
                 <p style="color: #FFFFFF; font-size: 24px">
-                    By self-reporting if you have been sick, you can help us track COVID-19 cases in our campus...
+                    By self-reporting if you have been sick, you can help us <br><br>
+                    track COVID-19 cases in our campus...
+                    <br><br>
                 </p>
-                <a href="self-reporting.php" class="primary-btn text-uppercase">Take me to the self-report page</a>
             </div>
         </div>
     </div>
@@ -54,45 +55,39 @@
 <!-- End banner Area -->
 
 <!-- Start feature Area -->
-<section class="feature-area">
+<section class="post-content-area single-post-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="single-feature" onclick="location.href='self-reporting.php';">
-                    <div class="title">
-                        <h4>Employee/Staff Self-Reporting</h4>
-                    </div>
-                    <div class="desc-wrap">
+                <div class="single-feature" onclick="location.href='campus-tracing.php';">
+                    <div class="quotes">
+                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html" target="_blank"><h3 class="mt-20 mb-20">Campus Tracing</h3></a>
                         <p>
-                            If you are an employee/staff member, please use this page to self-report
+                            Find the latest information about campus tracing and where the latest confirmed cases have occurred. <br>
+                            <span style="float:right;"><a href="" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                         </p>
-                        <a href="self-reporting.php">Click Here</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="single-feature" onclick="location.href='self-reporting.php';">
-                    <div class="title">
-                        <h4>Student Self-Reporting</h4>
-                    </div>
-                    <div class="desc-wrap">
+                    <div class="quotes">
+                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html" target="_blank"><h3 class="mt-20 mb-20">Let us know if you have been sick!</h3></a>
                         <p>
-                            If you are a university student, please use this page to self-report
+                            Whether you are a student, staff or faculty member, please report if you have been confirmed with COVID-19 to help us identify possible campus virus breakouts.  <br>
+                            <span style="float:right;"><a href="" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                         </p>
-                        <a href="#">Click Here</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="single-feature" onclick="location.href='campus-COVID-cases.php';">
-                    <div class="title">
-                        <h4>Campus COVID Cases</h4>
-                    </div>
-                    <div class="desc-wrap">
+                <div class="single-feature" onclick="location.href='testing-centers.php';">
+                    <div class="quotes">
+                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html" target="_blank"><h3 class="mt-20 mb-20">Don't know where to get tested?</h3></a>
                         <p>
-                            Keep yourself updated about COVID cases in your campus
+                            Use this link to find the nearest COVID-19 testing centers to our campus. Also, use our <a href="resources.php">Resources</a> page to keep updated with the latest COVID-19 related community and campus news.<br>
+                            <span style="float:right;"><a href="" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                         </p>
-                        <a href="#">Click Here</a>
                     </div>
                 </div>
             </div>
