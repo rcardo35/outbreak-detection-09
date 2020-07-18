@@ -43,6 +43,72 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+    <script>
+        window.addEventListener("load", function() {
+                                getRows();
+                                });
+
+        function getRows() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("get", "create-table-xml.php", true);
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    showResult(this);
+                }
+            };
+            xmlhttp.send(null);
+        }
+
+        function showResult(xmlhttp) {
+            var xmlDoc = xmlhttp.responseXML.documentElement;
+            removeWhitespace(xmlDoc);
+            var outputResult = document.getElementById("BodyRows");
+            var rowData = xmlDoc.getElementsByTagName("marker");
+            
+            addTableRowsFromXmlDoc(rowData,outputResult);
+        }
+
+        function addTableRowsFromXmlDoc(xmlNodes,tableNode) {
+            var theTable = tableNode.parentNode;
+            var newRow, newCell, i;
+            console.log ("Number of nodes: " + xmlNodes.length);
+            for (i=0; i<xmlNodes.length; i++) {
+                newRow = tableNode.insertRow(i);
+                newRow.className = (i%2) ? "OddRow" : "EvenRow";
+                console.log("outer \n");
+                for (j=0; j<xmlNodes[i].childNodes.length; j++) {
+                    console.log("1 \n");
+                    newCell = newRow.insertCell(newRow.cells.length);
+                    console.log("2 \n");
+                    if (xmlNodes[i].childNodes[j].firstChild) {
+                        newCell.innerHTML = xmlNodes[i].childNodes[j].firstChild.nodeValue;
+                    } else {
+                        newCell.innerHTML = "-";
+                    }
+                    console.log("3 \n");
+                    console.log("cell: " + newCell);
+                }
+            }
+            theTable.appendChild(tableNode);
+        }
+
+        function removeWhitespace(xml) {
+            var loopIndex;
+            for (loopIndex = 0; loopIndex < xml.childNodes.length; loopIndex++)
+            {
+                var currentNode = xml.childNodes[loopIndex];
+                if (currentNode.nodeType == 1)
+                {
+                    removeWhitespace(currentNode);
+                }
+                if (!(/\S/.test(currentNode.nodeValue)) && (currentNode.nodeType == 3))
+                {
+                    xml.removeChild(xml.childNodes[loopIndex--]);
+                }
+            }
+        }
+    </script>
+
     <style>
         iframe {
             border: none;
@@ -85,6 +151,15 @@
             text-align: center;
         }
 
+        table {
+        }
+        td {
+        padding: 2px;
+        border: 1px solid #dadada;
+        }
+        .EvenRow {
+            background-color: yellow;
+        }
     </style>
 
 </head>
@@ -131,6 +206,18 @@
                 <div class="details">
                     <iframe src="map.php"
                     width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+            <div class="single-popular-carusel col-lg-6 col-md-7">
+                <div class="thumb-wrap relative">
+                    <div class="thumb relative">
+                        <div class="overlay overlay-bg"></div>
+                    </div>
+                </div>
+                <div class="details">
+                    <table id="MainTable">
+                        <tbody id="BodyRows"></tbody>
+                    </table>
                 </div>
             </div>
         </div>

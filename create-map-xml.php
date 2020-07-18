@@ -23,7 +23,7 @@
                                  )
                            WHERE
                            (c.CaseID IS NOT NULL) AND (c.BeenMedicallyConfirmed = 'Yes')
-                           GROUP BY m.name;;");
+                           GROUP BY m.name;");
     if (!$stmt) {
         die($mysqli->error);
     }
