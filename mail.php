@@ -1,34 +1,50 @@
 <?php
-//    require 'vendor/autoload.php'; // If you're using Composer (recommended)
-// Comment out the above line if not using Composer
-    require("sendgrid-php/sendgrid-php.php");
-// If not using Composer, uncomment the above line and
-// download sendgrid-php.zip from the latest release here,
-// replacing <PATH TO> with the path to the sendgrid-php.php file,
-// which is included in the download:
-// https://github.com/sendgrid/sendgrid-php/releases
+
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+    
+    require 'PHPMailer-master/src/Exception.php';
+    require 'PHPMailer-master/src/PHPMailer.php';
+    require 'PHPMailer-master/src/SMTP.php';
+
+// Instantiation and passing `true` enables exceptions
+    $mail = new PHPMailer(true);
+    
+    $to = $_POST['demo-email'];
+    $building = $_POST['building'];
+    
+    try {
+        //Server settings
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+        $mail->isSMTP();                                            // Send using SMTP
+        $mail->Host       = 'smtp.sendgrid.net';                    // Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+        $mail->Username   = 'apikey';                     // SMTP username
+        $mail->Password   = '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';                               // SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    
+        //Recipients
+        $mail->setFrom('covidalert@techpointuniversity.edu', 'TechPoint University COVID-19 Alert System');
+        $mail->addAddress($to);     // Add a recipient
+        $mail->addCC('rcardona4@miners.utep.edu');
     
     
-    if (isset($_POST)) {
-        
-        $to = filter_var($_POST['demo-email'], FILTER_SANITIZE_EMAIL);
-        $building = filter_var($_POST['building'], FILTER_SANITIZE_STRING);
-        
-        $email = new \SendGrid\Mail\Mail();
-        $email->setFrom("covidalert@techpointuniversity.edu", "TechPoint University Alert System");
-        $email->setSubject("COVID-19 Alert");
-        $email->addTo($to, "University Member");
-        $email->addContent("text/html", "<strong>Univeristy Alert:</strong>
-            <p>A University team member who was in the <b>$building</b> building within the last two weeks has been confirmed with COVID-19 and is under medical supervision off-campus. Until further notice no one is permitted to enter the <b>$building</b> while the University employs professional sanitation and protocols for restoring the area for entry and use.</p>
-            <p>This is an automated notification, please do not reply to this email. If you have any questions please contact: <mailto>healthcenter@techpointuniversity.edu directly.</mailto></p>"
-        );
-        $sendgrid = new \SendGrid('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');
-        try {
-            $response = $sendgrid->send($email);
-            print $response->statusCode() . "\n";
-            print_r($response->headers());
-            print $response->body() . "\n";
-        } catch (Exception $e) {
-            echo 'Caught exception: ' . $e->getMessage() . "\n";
-        }
+        // Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'COVID-19 ALERT';
+        $mail->Body    = "<p><b>University Alert:</b></p>
+                          <p>A University team member who was in the <b>{$building}</b> within the last two weeks has been confirmed with COVID-19 and is under medical supervision off-campus. Until further notice no one is permitted to enter the <b>{$building}</b> while the University employs professional sanitation and protocols for restoring the area for entry and use.</p>
+                          <p>This is an automated notification, please do not reply to this email.<br> If you have any questions please contact: healthcenter@techpointuniversity.edu directly.
+
+</p>";
+    
+        $mail->send();
+        echo 'Message has been sent';
+        header('Location: health-center-view.php?noaccess=false');
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
