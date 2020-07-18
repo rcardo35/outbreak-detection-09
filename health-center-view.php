@@ -44,7 +44,7 @@
 
     <!-- Datatable -->
     <!--    <link rel="stylesheet" href="assets/css/datablecss.css">-->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">-->
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -490,7 +490,10 @@
 	$(document).on('click', '.edit_data', function () {
 		var caseID = $(this).attr('id');
 		$.ajax({
-			url: "edit-case.php", type: "post", data: {caseID: caseID}, success: function (data) {
+			url: "edit-case.php",
+            type: "post",
+            data: {caseID: caseID},
+            success: function (data) {
 				$("#info_update").html(data);
 				$("#editData").modal('show');
 			}
@@ -511,7 +514,10 @@
 		$('input[name="symptoms"]').val(symptoms);
 		
 		$.ajax({
-			url: "update-case.php", type: "post", data: $("#updateForm").serialize() + "&symptoms=" + symptoms, success: function (data) {
+			url: "update-case.php",
+            type: "post",
+            data: $("#updateForm").serialize() + "&symptoms=" + symptoms,
+            success: function (data) {
 				alert("Record updated successfully");
 				$("#editData").modal('hide');
 				location.reload();

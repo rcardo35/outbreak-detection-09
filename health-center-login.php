@@ -314,9 +314,7 @@
 <!-- Start contact-page Area -->
 <section class="contact-page-area section-gap" style="width: 100%">
     <div class="container" style="width: 100%">
-        <h3 class="center req">Please note this page is for healthcare center administrators only. If you are a student and would like to see the cases in campus please click here: <a
-                    href="campus-tracing.php">Campus Tracing</a></h3>
-
+        <h3 class="center req">Please note this page is for healthcare center administrators only. If you are a student and would like to see the cases in campus please click here: <a href="campus-tracing.php">Campus Tracing</a></h3>
         <br>
         <div class="wrapper fadeInDown">
             <div id="formContent">
