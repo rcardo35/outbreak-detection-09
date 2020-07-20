@@ -18,12 +18,10 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Education</title>
+    <title>Campus Tracing</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-    CSS
-    ============================================= -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/linearicons.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -80,23 +78,13 @@
                 width: 100%;
             }
         }
-
-        .req {
-            color: #0c5460;
-            font-size: 14px;
-        }
-
-        .center {
-            text-align: center;
-        }
-
     </style>
 
 </head>
 <body>
 <header id="header" id="home">
     <?php require_once "navbar.php"; ?>
-</header><!-- #header -->
+</header>
 
 <!-- start banner Area -->
 <section class="banner-area relative about-banner" id="home">
@@ -104,6 +92,8 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
+                <br>
+                <br>
                 <h1 class="text-white">
                     Campus COVID-19 Cases Map
                 </h1>
@@ -115,7 +105,7 @@
 
 
 <!-- start campus-page Area -->
-<section class="popular-courses-area section-gap courses-page">
+<section class="contact-page-area section-gap">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">

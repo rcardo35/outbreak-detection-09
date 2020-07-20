@@ -17,9 +17,7 @@
     <title>Resources</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-    CSS
-    ============================================= -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/linearicons.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -30,23 +28,20 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <style>
-        .center {
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
 <header id="header" id="home">
     <?php require_once "navbar.php"; ?>
-</header><!-- #header -->
+</header>
 
 <!-- start banner Area -->
-<section class="banner-area relative" id="home">
+<section class="banner-area relative about-banner" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
+                <br>
+                <br>
                 <h1 class="text-white">
                     Resources
                 </h1>
@@ -187,7 +182,8 @@
                             <hr>
                             <div class="single-post-list d-flex flex-row align-items-center">
                                 <div class="details">
-                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" target="_blank"><h4>Check your Symptoms! <br><span style="font-size: small; color: gray" >CDC Self-Checker Page</span><br>
+                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" target="_blank"><h4>Check your Symptoms! <br><span
+                                                    style="font-size: small; color: gray">CDC Self-Checker Page</span><br>
                                         </h4>
                                         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<p style="float: right">Updated 20 days ago</p></a>
                                 </div>

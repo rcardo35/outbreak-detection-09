@@ -4,7 +4,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <!--<link rel="shortcut icon" href="assets/img/fav.png">-->
+    <link rel="shortcut icon" href="assets/img/fav.png">
     <!-- Author Meta -->
     <meta name="author" content="colorlib">
     <!-- Meta Description -->
@@ -14,12 +14,10 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Education</title>
+    <title>Send Alert</title>
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-    CSS
-    ============================================= -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/linearicons.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -33,7 +31,7 @@
 <body>
 <header id="header" id="home">
     <?php require_once "navbar.php"; ?>
-</header><!-- #header -->
+</header>
 
 <!-- start banner Area -->
 <section class="banner-area relative about-banner" id="home">
@@ -41,6 +39,8 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
+                <br>
+                <br>
                 <h1 class="text-white">
                     Alert System
                 </h1>
@@ -50,9 +50,8 @@
 </section>
 <!-- End banner Area -->
 
-
-<!-- start campus-page Area -->
-<section class="popular-courses-area section-gap courses-page">
+<!-- start send alert Area -->
+<section class="post-content-area single-post-area">
     <div class="container">
         <br><br>
         <div id="accordion">
@@ -71,7 +70,7 @@
                         <form id="myForm" action="mail.php" method="post">
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <label for="demo-email">Email: <span class="req">  *</span> </label>
+                                    <label for="demo-email" style="color: black">Email: <span class="req">  *</span> </label>
                                 </div>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="demo-email" id="demo-email" placeholder="Valid Email Required" required>
@@ -80,7 +79,7 @@
                             <br>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <label for="building">Please select enter the building you would like to send in the alert: <span class="req">  *</span> </label>
+                                    <label for="building" style="color: black">Please select enter the building you would like to send in the alert: <span class="req">  *</span> </label>
                                 </div>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="building" id="building" placeholder="Building Name" required>
@@ -97,7 +96,7 @@
         </div>
     </div>
 </section>
-<!-- End campus-page Area -->
+<!-- End send alert Area -->
 
 <!-- start footer Area -->
 <?php

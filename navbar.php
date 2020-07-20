@@ -5,13 +5,12 @@
                 <ul>
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                 </ul>
             </div>
             <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-                <a href="tel:+953 012 3654 896"><span class="lnr lnr-phone-handset"></span> <span class="text">+953 012 3654 896</span></a>
-                <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text">email@techpointuniversity.com</span></a>
+                <a href="tel:+953 012 3654 896"><span class="fa fa-phone"></span> <span class="text">+953 012 3654 896</span></a>
+                <a href="mailto:"><span class="fa fa-envelope"></span> <span class="text">email@techpointuniversity.com</span></a>
             </div>
         </div>
     </div>
@@ -28,7 +27,6 @@
                 <li><a href="resources.php">Resources</a></li>
                 <li><a href="self-reporting.php">Self-Report Page</a></li>
                 <li><a href="health-center-login.php">Health Center Staff Login</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>

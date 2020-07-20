@@ -15,9 +15,7 @@
     <title>TechPoint University</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-    CSS
-    ============================================= -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/linearicons.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -32,7 +30,7 @@
 <body>
 <header id="header" id="home">
     <?php require_once "navbar.php"; ?>
-</header><!-- #header -->
+</header>
 
 <!-- start banner Area -->
 <section class="banner-area relative" id="home">
@@ -40,14 +38,19 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
+                <br>
+                <br>
                 <h1 class="text-uppercase text-white">
-                    Help us create a safer campus! <br><br>
+                    Help us create a safer campus!
                 </h1>
+                <br>
+                <br>
                 <p style="color: #FFFFFF; font-size: 24px">
                     By self-reporting if you have been sick, you can help us <br><br>
                     track COVID-19 cases in our campus...
-                    <br><br>
                 </p>
+                <br>
+                <br>
             </div>
         </div>
     </div>
@@ -61,10 +64,10 @@
             <div class="col-lg-4">
                 <div class="single-feature" onclick="location.href='campus-tracing.php';">
                     <div class="quotes">
-                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html" target="_blank"><h3 class="mt-20 mb-20">Campus Tracing</h3></a>
+                        <a href="campus-tracing.php"><h3 class="mt-20 mb-20">Campus Tracing</h3></a>
                         <p>
                             Find the latest information about campus tracing and where the latest confirmed cases have occurred. <br>
-                            <span style="float:right;"><a href="" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
+                            <span style="float:right;"><a href="campus-tracing.php" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                         </p>
                     </div>
                 </div>
@@ -72,10 +75,11 @@
             <div class="col-lg-4">
                 <div class="single-feature" onclick="location.href='self-reporting.php';">
                     <div class="quotes">
-                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html" target="_blank"><h3 class="mt-20 mb-20">Let us know if you have been sick!</h3></a>
+                        <a href="self-reporting.php" target="_blank"><h3 class="mt-20 mb-20">Let us know if you have been sick!</h3>
+                        </a>
                         <p>
-                            Whether you are a student, staff or faculty member, please report if you have been confirmed with COVID-19 to help us identify possible campus virus breakouts.  <br>
-                            <span style="float:right;"><a href="" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
+                            Whether you are a student, staff or faculty member, please report if you have been confirmed with COVID-19 to help us identify possible campus virus breakouts. <br>
+                            <span style="float:right;"><a href="self-reporting.php" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                         </p>
                     </div>
                 </div>
@@ -83,10 +87,11 @@
             <div class="col-lg-4">
                 <div class="single-feature" onclick="location.href='testing-centers.php';">
                     <div class="quotes">
-                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html" target="_blank"><h3 class="mt-20 mb-20">Don't know where to get tested?</h3></a>
+                        <a href="testing-centers.php" target="_blank"><h3 class="mt-20 mb-20">Don't know where to get tested?</h3></a>
                         <p>
-                            Use this link to find the nearest COVID-19 testing centers to our campus. Also, use our <a href="resources.php">Resources</a> page to keep updated with the latest COVID-19 related community and campus news.<br>
-                            <span style="float:right;"><a href="" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
+                            Use this link to find the nearest COVID-19 testing centers to our campus. Also, use our <a href="resources.php">Resources</a> page to keep updated with the latest COVID-19
+                            related community and campus news.<br>
+                            <span style="float:right;"><a href="testing-centers.php" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                         </p>
                     </div>
                 </div>

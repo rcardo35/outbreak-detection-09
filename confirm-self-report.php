@@ -25,12 +25,10 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Education</title>
+    <title>Confirmation</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-    CSS
-    ============================================= -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/linearicons.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -43,84 +41,11 @@
 
     <link rel="stylesheet" href="assets/css/panelcss.css">
 
-    <script type="text/javascript">
-		
-		$(document).ready(function () {
-			
-			$('#exp_date').datepicker({
-				changeMonth: true, changeYear: true, weekStart: 1,
-			});
-		});
-		
-		$('#submit').click(function () {
-			console.log("entered method");
-			checked = $("input[type=checkbox]:checked").length;
-			
-			if($("input[type=checkbox]:checked").length > 0) {
-				alert("You must check at least one checkbox.");
-				return false;
-			}
-			
-		});
-		
-		function toggleSymptoms() {
-			var noSymptoms = document.getElementById("no_symptoms");
-			
-			var symp1 = document.getElementById("fever");
-			var symp2 = document.getElementById("cough");
-			var symp3 = document.getElementById("shortness_of_breath");
-			
-			if(noSymptoms.checked) {
-				symp1.disabled = true;
-				symp2.disabled = true;
-				symp3.disabled = true;
-			} else {
-				symp1.disabled = false;
-				symp2.disabled = false;
-				symp3.disabled = false;
-			}
-		}
-		
-		$('.optionBox input:checkbox').click(function () {
-			var $inputs = $('.optionBox input:checkbox');
-			if($(this).value() === "No Symptoms") {
-				console.log($(this).value());
-				if($(this).is(':checked')) {  // <-- check if clicked box is currently checked
-					$inputs.not(this).prop('disabled', true); // <-- disable all but checked checkbox
-				} else {  //<-- if checkbox was unchecked
-					$inputs.prop('disabled', false); // <-- enable all checkboxes
-				}
-			}
-		});
-
-    </script>
-
-    <style>
-        .form-wrapper {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            min-height: 100%;
-            padding: 20px;
-        }
-
-        .req {
-            color: #C00;
-            font-size: 12px;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-    </style>
 </head>
 <body>
 <header id="header" id="home">
     <?php require_once "navbar.php"; ?>
-</header><!-- #header -->
+</header>
 
 <!-- start banner Area -->
 <section class="banner-area relative about-banner" id="home">
@@ -128,10 +53,11 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
-<!--                <h1 class="text-white">-->
-<!--                    Self-Reporting-->
-<!--                </h1>-->
-<!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="self-reporting.php">Self-Reporting</a></p>-->
+                <br>
+                <br>
+                <h1 class="text-white">
+                    Self-Reporting
+                </h1>
             </div>
         </div>
     </div>
@@ -144,17 +70,26 @@
         <div class="panel panel-info" style="width: 90%">
             <div class="panel-heading"><h3><b style="color: black">Confidential Health Form</b></h3></div>
             <div class="panel-body" align="left">
-                <p align="center">
-                    Thank you for submitting your answers. Your personal information will not be shared with anyone and will only be used to improve campus reopening efforts! You will be contacted by a school administrator soon.
+                <p align="center" style="color:#000;">
+                    Thank you for submitting your answers. Your personal information will not be shared with anyone and will only be used to improve campus reopening efforts! You will be contacted by
+                    a school administrator soon.
                 </p>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <a href="index.php" class="primary-btn" style="float: none; font-size: 16px">Home</a>
-        <br><br>
+        <br>
+        <br>
     </div>
-    <!--    </div>-->
 </section>
-<!-- End contact-page Area -->
+
 
 <!-- start footer Area -->
 <?php
