@@ -23,7 +23,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Education</title>
+    <title>Health Center</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--
@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script type="text/javascript">
-		function openCity(evt, cityName) {
+		function openTable(evt, tabName) {
 			
 			var i, tabcontent, tablinks;
 			tabcontent = document.getElementsByClassName("tabcontent");
@@ -64,7 +64,7 @@
 			for(i = 0; i < tablinks.length; i++) {
 				tablinks[i].className = tablinks[i].className.replace(" active", "");
 			}
-			document.getElementById(cityName).style.display = "block";
+			document.getElementById(tabName).style.display = "block";
 			evt.currentTarget.className += " active";
 		}
 		
@@ -120,10 +120,6 @@
             height: calc(1.8125rem + 6px)
         }
 
-        #example_length {
-            height: calc(1.8125rem + 6px) !important;
-        }
-
         .center {
             text-align-last: center;
         }
@@ -153,7 +149,7 @@
 <body>
 <header id="header" id="home">
     <?php require_once "navbar.php"; ?>
-</header><!-- #header -->
+</header>
 
 <!-- start banner Area -->
 <section class="banner-area relative about-banner" id="home">
@@ -161,6 +157,8 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
+                <br>
+                <br>
                 <h1 class="text-white">
                     Health Center </h1>
             </div>
@@ -175,9 +173,9 @@
         <h1 class="center mb-10" style="color:#222 ">Campus Tracing Tables</h1>
         <br>
         <div class="tab">
-            <button class="tablinks" id="students" onclick="openCity(event, 'Student Table')">Student Table</button>
-            <button class="tablinks" onclick="openCity(event, 'Staff Table')">Staff Table</button>
-            <button class="tablinks" onclick="openCity(event, 'Faculty Table')">Faculty Table</button>
+            <button class="tablinks" id="students" onclick="openTable(event, 'Student Table')">Student Table</button>
+            <button class="tablinks" onclick="openTable(event, 'Staff Table')">Staff Table</button>
+            <button class="tablinks" onclick="openTable(event, 'Faculty Table')">Faculty Table</button>
         </div>
 
         <div id="Student Table" class="tabcontent">
@@ -193,7 +191,7 @@
                     <th>Full Student Name</th>
                     <th>Phone Number</th>
                     <th>University Email Address</th>
-                    <th>Campus Housing Living?</th>
+                    <th>Live in Campus Housing</th>
                     <th>Campus Places Visited</th>
                     <th> Current Symptoms Present &ensp;</th>
                     <th>Medically Confirmed</th>
@@ -318,7 +316,7 @@
                     <a href="send-alert.php" target="_blank"><h4 class="mt-20 mb-20">Test our email alert system!</h4></a>
                     <p>
                         This email alert will allow health center staff to send out email alerts when a new case is confirmed<br>
-                        <span style="float:right;"><a href="send-alert.php" target="_blank">Learn more! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
+                        <span style="float:right;"><a href="send-alert.php" target="_blank">Send an alert! <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
                     </p>
                 </div>
             </div>
@@ -342,8 +340,7 @@
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Update Entry</h4>
                     <button type="button" class="close req" data-dismiss="modal" aria-label="Close">
-                        <spanaria-hidden
-                        ="true">&times;</span></button>
+                        <span aria-hidden="true">X</span>
                 </div>
                 <div class="modal-body" id="info_update">
                 </div>
@@ -372,9 +369,7 @@
 <script src="assets/js/jquery.nice-select.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/main.js"></script>
-<!--<script src="assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>-->
 
-<!--<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>-->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
 
@@ -411,8 +406,6 @@
 			}
 		});
 	});
-
-
 </script>
 </body>
 </html>

@@ -25,8 +25,6 @@
         $symptomsList = explode(",", $symptoms);
     }
 ?>
-<!--<input type="hidden" name="caseID" id="caseID" class="form-control" value="--><?php //echo $caseID ?><!--">-->
-
 <div class="form-group">
     <label>Case ID:</label>
     <input class="form-control" type="text" name="CaseID" id="CaseID" value="<?php echo $caseID; ?>" readonly>
@@ -73,12 +71,12 @@
 
 <div class="form-group">
     <script type="text/javascript">
-    
+		
 		var groupList = <?php echo json_encode($symptomsList); ?>;
 		console.log(groupList);
-		groupList.forEach(function(element){
+		groupList.forEach(function (element) {
 			$('input:checkbox[name=symptoms]').each(function () {
-				if ($(this).val() == element) {
+				if($(this).val() == element) {
 					console.log($(this).val());
 					($(this).prop('checked', true));
 				}

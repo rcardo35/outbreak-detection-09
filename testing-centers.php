@@ -75,7 +75,7 @@
 <body>
 <header id="header" id="home">
     <?php require_once "navbar.php"; ?>
-</header><!-- #header -->
+</header>
 
 <!-- start banner Area -->
 <section class="banner-area relative about-banner" id="home">
@@ -83,17 +83,17 @@
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
+                <br>
+                <br>
                 <h1 class="text-white">
                     Testing Centers
                 </h1>
-<!--                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="testing-centers.php"> Popular Courses</a></p>-->
             </div>
         </div>
     </div>
 </section>
 <!-- End banner Area -->
 
-<!-- Start popular-courses Area -->
 <section class="popular-courses-area section-gap courses-page">
     <div class="container">
         <div class="row d-flex justify-content-center">
@@ -187,9 +187,8 @@
         </div>
     </div>
 </section>
-<!-- End popular-courses Area -->
 
-<!-- Start search-course Area -->
+<!-- Start zipcode Area -->
 <section class="search-course-area relative">
     <div class="overlay overlay-bg"></div>
     <div class="container">
@@ -220,15 +219,13 @@
         </div>
     </div>
 </section>
-<!-- End search-course Area -->
+<!-- End zipcode Area -->
 
 <!-- start footer Area -->
 <?php
     require_once("footer.php");
 ?>
-
 <!-- End footer Area -->
-
 
 <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.assets/js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
